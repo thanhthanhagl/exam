@@ -1,44 +1,38 @@
 <%- include('_layouts/layout', { title: 'Home page' }); -%>
 
-<!-- @meta -->
-<meta name="description" content="Home page">
-<!-- @@meta -->
+  <!-- @meta -->
+  <meta name="description" content="Home page">
+  <!-- @@meta -->
 
-<!-- @content -->
-<main class="p-top">
-  <section class="c-mainvisual">
-    <div class="c-mainvisual__inner">
-      <h2>LOREM IPSUM</h2>
-      <p>In volutpat metus quis velit malesuada</p>
-      <a href="<%= BASE_URL %>about.html" class="c-btn1">JOIN NOW</a>
-    </div>
-  </section>
-
-  <section class="p-top1">
-    <div class="l-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-        <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-        <br>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        dolorem eaque minima deleniti dicta doloremque ut, officiis odit tempora
-        culpa mollitia ipsa quas quibusdam. Voluptate illo nam delectus
-        reprehenderit laborum?
-      </p>
-    </div>
-  </section>
-</main>
-<!-- @@content -->
-
-<!-- @script -->
-<script>
-  console.log("home page");
-</script>
-<!-- @@script -->
+  <!-- @content -->
+  <main class="p-top">
+    <!-- start section mainvisual  -->
+    <section class="c-mainvisual">
+      <div class="c-mainvisual__slider">
+        <div class="c-mainvisual__slide c-mainvisual__slidemain"></div>
+        <div class="c-mainvisual__slide c-mainvisual__slidemiddle"></div>
+        <div class="c-mainvisual__slide c-mainvisual__slideend"></div>
+      </div>
+      <div class="c-mainvisual__inner">
+        <h2 class="c-mainvisual__title">
+          <span class="c-mainvisual__txt">私たちは、<br></span>
+          <span class="c-mainvisual__txt">患者様に寄り添う医療を提供し、<br></span>
+          <span class="c-mainvisual__txt">地域に貢献します。</span>
+        </h2>
+        <div class="c-mainvisual__news">
+          <a href="#" class="c-mainvisual__type">最新のお知らせ</a>
+          <a href="#" class="c-mainvisual__date">2023.00.00</a>
+          <a href="#" class="c-mainvisual__post">テキストテキストテキテキスト…</a>
+        </div>     
+      </div>
+      <div class="c-mainvisual__scroll"><span class="c-mainvisual__btntxt">scroll</span></div>
+    </section>
+<!-- end section mainvisual  -->
+<!-- start section notification  -->
+<%- include('_partials/notify'); -%>
+<!-- end section notification  -->
+<!-- start section notification  -->
+<%- include('_partials/service'); -%>
+<!-- end section notification  -->
+  </main>
+  <!-- @@content -->
