@@ -2,22 +2,34 @@
   "linklists": {
     "main": [
       {
-        "title": "Home",
-        "url": "/"
+        "title": "トップ",
+        "url": "/",
+        "class":"c-header__home",
+        "icon":"./assets/img/home.svg"
       },
       {
-        "title": "About",
-        "url": "/about.html"
-      },
+        "title": "当院について ",
+        "url": "#",
+        "class":"c-header__hospital",
+        "icon":"./assets/img/hospital.svg"
+      }, 
       {
-        "title": "Nested 1",
-        "url": "/nested/",
-        "links": [
-          {
-            "title": "Nested 2",
-            "url": "/nested/nested/"
-          }
-        ]
+        "title": "診療について",
+        "url": "#",
+        "class":"c-header__medical",
+        "icon":"./assets/img/medical.svg"
+      }, 
+      {
+        "title": "交通アクセス",
+        "url": "#",
+        "class":"c-header__taxi",
+        "icon":"./assets/img/taxi.svg"
+      }, 
+      {
+        "title": "お知らせ",
+        "url": "#",
+        "class":"c-header__message",
+        "icon":"./assets/img/message.svg"
       }
     ]
   }

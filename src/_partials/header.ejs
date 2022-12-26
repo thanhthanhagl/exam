@@ -1,23 +1,24 @@
 <header class="c-header">
-  <h1 class="c-header__logo"><a href="<%= BASE_URL %>index.html"><img src="/assets/img/logo.png" alt="Logo"></a></h1>
-  <nav class="c-gnav">
-    <ul>
-      <% if (typeof linklists != 'undefined') { %>
-        <% linklists.main && linklists.main.forEach(link => { %>
-          <li>
-            <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %></a>
-            <% if (link.links) { %>
-              <ul>
-                <% link.links.forEach(child_link => { %>
-                  <li>
-                    <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%= child_link.title %></a>
-                  </li>
-                <% }) %>
-              </ul>
-            <% } %>
-          </li>
-        <% }) %>
-      <% } %>
-    </ul>
-  </nav>
+  <div class="c-header__main">
+    <div class="c-header__left">
+      <a class="c-header__logo" href="<%= BASE_URL %>index.html"><img src="./assets/img/logo.png" alt="Matsuguchi"></a>
+    <p class="c-header__slogan">松口内科・循環器内科クリニック</p>
+    </div>
+    <nav class="c-header__nav">
+      <ul class="c-header__menu">
+        <% if (typeof linklists != 'undefined') { %>
+          <% linklists.main && linklists.main.forEach(link => { %>
+            <li class="c-header__item <%= link.class %>">
+              <img class="c-header__icon" src="<%= link.icon %>" alt="<%= link.title %>">
+              <a class="c-header__link <% if (link.current || link.active) { %>is-active<% } %>" href="<%= link.url %>"><%= link.title %></a>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+    </nav>
+    <div class="c-header__right">
+      <a href="#" class="c-header__btn"><span class="c-header__txt">WEB 予約</span></a>
+      <p class="c-header__tel">092-407-5555</p>
+    </div>
+  </div>
 </header>
