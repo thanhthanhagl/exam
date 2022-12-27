@@ -1,0 +1,128 @@
+.c-notify {
+    padding: 87px 0 120px;
+
+    .c-notify__title {
+        &::after {
+            content: "";
+            position: relative;
+            width: 44px;
+            height: 3px;
+            background-image: url("./assets/img/after-title.svg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            top: 4px;
+            display: block;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+    }
+
+    .c-notify__main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 52px;
+    }
+
+    .c-notify__left {
+        width: 23%;
+    }
+
+    .c-notify__itemlabel {
+        display: block;
+        background-color: #c9c9c9;
+        color: $white;
+        cursor: pointer;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        max-width: 220px;
+        padding: 5.5px 0;
+        position: relative;
+        font-family: $sub-font;
+        font-weight: 500;
+        font-size: 1.6rem;
+        letter-spacing: 1.3px;
+        line-height: 1.8;
+
+        &.is-active {
+            background-color: $green;
+
+            &::after {
+                content: "";
+                background-image: url("./assets/img/arrow-after.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: block;
+                width: 20px;
+                height: 25px;
+                position: absolute;
+                left: 96%;
+                top: 12%;
+            }
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .c-notify__right {
+        width: 70.8%;
+    }
+
+    .c-notify__item {
+        padding: 16px 50px 14px;
+        border-top: 1px solid #afafaf;
+        display: block;
+
+        &:last-child {
+            border-bottom: 1px solid #afafaf;
+        }
+    }
+
+    .c-notify__content {
+        font-feature-settings: "palt" 1;
+        line-height: 1.8;
+        letter-spacing: 0;
+        display: flex;
+    }
+
+    .c-notify__date {
+        font-family: $main-font;
+        color: $black;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-right: 15px;
+    }
+
+    .c-notify__name {
+        font-family: $sub-font;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: $green;
+        margin-right: 14px;
+        width: 56px;
+    }
+
+    .c-notify__desc {
+        font-family: $main-font;
+        font-size: 1.6rem;
+        color: $black;
+        letter-spacing: 1.8px;
+        margin-right: 13px;
+    }
+
+    .c-notify__tag {
+        font-family: $sub-font;
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+        color: $yellow;
+        margin-top: -3px;
+    }
+
+    .c-notify__btn {
+        margin: 30px auto;
+    }
+}

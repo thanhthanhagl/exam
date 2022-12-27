@@ -1,0 +1,33 @@
+.c-service {
+    background-image: url("./assets/img/bg-section3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    .c-service__main {
+        padding: 218px 0 0;
+    }
+
+    .c-service__title {
+        margin-left: 17px;
+    }
+
+    .c-service__wrapimg {
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+
+    .c-service__img {
+        border-radius: 10px;
+    }
+
+    .c-service__desc {
+        font-family: $main-font;
+        font-weight: 500;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: 1.8;
+        color: $black;
+        margin-top: 34px;
+        font-feature-settings: "palt" 1;
+    }
+}

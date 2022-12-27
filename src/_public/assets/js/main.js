@@ -17,13 +17,18 @@ $(document).ready(function () {
     $('.c-mainvisual__slider').slick({
         infinite: true,
         fade: true,
-        autoplay: false,
+        autoplay: true,
         autoplayspeed: 3000,
         speed: 2000,
         arrows: false,
-        dots: false,
+        dots: true,
         pauseOnFocus: false,
         pauseOnHover: false,
         cssEase: 'linear'
     });
+    // notify label 
+    $(".c-notify__itemlabel").click(function(){
+        $(".c-notify__itemlabel").removeClass("is-active");
+        $(this).addClass("is-active");
+    })
 });

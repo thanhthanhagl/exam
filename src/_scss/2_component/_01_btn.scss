@@ -4,11 +4,41 @@ btn
 
 /*
 ------------------------------------------------------------*/
-.c-btn1 {
-    display: inline-block;
-    padding: 10px 50px;
+.c-btn {
+    display: block;
+    padding: 14px 0;
     font-size: 1.6rem;
-    border: 2px solid #fff;
-    border-radius: 20px;
+    border: 1px solid $green;
+    border-radius: 30px;
     line-height: 1;
+    background-color: $white;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    font-family: $sub-font;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    line-height: 1.8;
+    color: $green;
+    position: relative;
+
+    &:hover {
+        &::after {
+            right: calc(33px - 5%);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background-image: url("./assets/img/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 12px;
+        position: absolute;
+        right: 33px;
+        top: 40%;
+    }
 }
