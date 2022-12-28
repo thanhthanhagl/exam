@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.996" height="29.999" viewBox="0 0 29.996 29.999">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_261" data-name="Rectangle 261" width="29.996" height="29.999" transform="translate(1303.674 9251.803)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="facebook" transform="translate(-1303.674 -9251.803)">
+    <g id="facebook-2" data-name="facebook">
+      <g id="Group_310" data-name="Group 310" clip-path="url(#clip-path)">
+        <path id="Path_349" data-name="Path 349" d="M1333.671,9266.8a15,15,0,1,0-17.344,14.818v-10.482h-3.808V9266.8h3.808v-3.3c0-3.759,2.24-5.836,5.666-5.836a23.074,23.074,0,0,1,3.358.293v3.692h-1.892a2.167,2.167,0,0,0-2.444,2.342v2.813h4.16l-.665,4.336h-3.495v10.482a15,15,0,0,0,12.656-14.818Z" fill="#1877f2"/>
+      </g>
+    </g>
+    <path id="facebook-3" data-name="facebook" d="M1324.51,9271.138l.665-4.336h-4.16v-2.813a2.167,2.167,0,0,1,2.444-2.342h1.892v-3.692a23.074,23.074,0,0,0-3.358-.293c-3.426,0-5.666,2.077-5.666,5.836v3.3h-3.808v4.336h3.808v10.482a15.215,15.215,0,0,0,4.688,0v-10.482Z" fill="#fff"/>
+  </g>
+</svg>

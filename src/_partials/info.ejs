@@ -1,0 +1,22 @@
+<section class="c-info">
+    <div class="l-container l-container--w1200">
+        <div class="c-info__contain">
+            <h2 class="c-title">外来診療について</h2>
+        <div class="c-info__list">
+            <% if(typeof info !='undefined' ){ info.forEach(item=>{ %>
+                <div class="c-info__wrapitem">
+                    <div class="c-info__item">
+                        <div class="c-info__icon"><img src="<%= item.img %>" alt="<%= item.title %>" class="c-info__img"></div>
+                        <h3 class="c-info__name">
+                            <%= item.title %>
+                        </h3>
+                        <p class="c-info__desc"><%- item.desc %></p>
+                        <a href="<%= item.link %>" class="c-btn c-info__btn">詳しくみる</a>
+                    </div>
+                </div>
+                <%}) }%>
+        </div>
+        </div>
+    </div>
+    <div class="c-info__bg">background-fixed</div>
+</section>

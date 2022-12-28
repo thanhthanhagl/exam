@@ -1,22 +1,6 @@
 .c-notify {
     padding: 87px 0 120px;
 
-    .c-notify__title {
-        &::after {
-            content: "";
-            position: relative;
-            width: 44px;
-            height: 3px;
-            background-image: url("./assets/img/after-title.svg");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            top: 4px;
-            display: block;
-            transform: translateX(-50%);
-            left: 50%;
-        }
-    }
-
     .c-notify__main {
         width: 100%;
         display: flex;

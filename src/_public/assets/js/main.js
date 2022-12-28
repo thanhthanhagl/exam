@@ -26,8 +26,20 @@ $(document).ready(function () {
         pauseOnHover: false,
         cssEase: 'linear'
     });
+    $('.c-home__slides').slick({
+        infinite: true,
+        autoplay: true,
+        speed: 10000,
+        autoplayspeed:1000,
+        arrows: false,
+        dots: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidetoShow:6,
+        slidetoScroll:6
+    });
     // notify label 
-    $(".c-notify__itemlabel").click(function(){
+    $(".c-notify__itemlabel").click(function () {
         $(".c-notify__itemlabel").removeClass("is-active");
         $(this).addClass("is-active");
     })

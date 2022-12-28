@@ -13,4 +13,18 @@ title
     letter-spacing: 2.4px;
     line-height: 1.8;
     text-align: center;
+
+    &::after {
+        content: "";
+        position: relative;
+        width: 44px;
+        height: 3px;
+        background-image: url("./assets/img/after-title.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        top: 4px;
+        display: block;
+        transform: translateX(-50%);
+        left: 50%;
+    }
 }

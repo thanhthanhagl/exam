@@ -14,7 +14,7 @@
         top: -3%;
         left: 0;
         z-index: -1;
-        background-image: url("./assets/img/path.svg");
+        background-image: url("./assets/img/bg-header.png");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -55,8 +55,8 @@
         width: 36%;
         padding: 12px 10px;
         flex: 1;
-        max-width: 673px;
-        margin-left: -14px;
+        max-width: 672px;
+        margin-left: -13px;
     }
 
     .c-header__menu {
@@ -66,6 +66,7 @@
 
     .c-header__item {
         padding: 16px 0;
+        cursor: pointer;
     }
 
     .c-header__icon {
@@ -87,22 +88,34 @@
         font-feature-settings: "palt" 1;
         line-height: 1.8;
         text-align: center;
+
+        &:hover {
+            opacity: 1;
+
+            &>.c-header__icon {
+                margin-top: -5px;
+                margin-bottom: 7px;
+            }
+        }
     }
 
     .c-header__taxi {
-        &>.c-header__icon {
+        &>.c-header__link .c-header__icon {
             width: 28px;
             height: 22px;
             margin-bottom: 4px;
         }
 
-        &>.c-header__link {
-            margin-left: -2px;
+        &:hover {
+            &>.c-header__link .c-header__icon {
+                margin-top: -5px;
+                margin-bottom: 9px;
+            }
         }
     }
 
     .c-header__message {
-        &>.c-header__icon {
+        &>.c-header__link .c-header__icon {
             width: 28px;
             height: 24px;
         }
@@ -118,7 +131,7 @@
 
     .c-header__btn {
         display: inline-block;
-        max-width: 200px;
+        max-width: 199px;
         width: 61.5%;
         border: 1px solid $green;
         border-radius: 25px;
