@@ -44,3 +44,52 @@ btn
         top: 40%;
     }
 }
+
+.c-backtotop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid $green;
+    font-family: $sub-font;
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
+    line-height: 1.75;
+    text-align: center;
+    color: $green;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding-top: 20px;
+    padding-left: 10px;
+    z-index: 3;
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: -50%;
+        left: -45%;
+        background-image: url("./assets/img/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 10px;
+        height: 12px;
+        transform: rotate(-90deg);
+    }
+
+    &.is-up {
+        animation: UpAnime 0.5s forwards;
+    }
+
+    &.is-down {
+        animation: DownAnime 0.5s forwards;
+    }
+}

@@ -138,4 +138,18 @@
     .c-home__slide {
         border-radius: 10px;
     }
+
+    .c-home__scroll {
+        background: -webkit-linear-gradient(left, rgb(255, 218, 77) 50%, transparent 50%);
+        background: -moz-linear-gradient(left, rgb(255, 218, 77) 50%, transparent 50%);
+        background: linear-gradient(left, rgb(255, 218, 77) 50%, transparent 50%);
+        background-repeat: no-repeat;
+        background-size: 200% 4px;
+        background-position: 100% 100%;
+        transition: 2s;
+
+        &.is-active {
+            background-position: 0 100%;
+        }
+    }
 }

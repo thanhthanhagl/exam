@@ -5,6 +5,22 @@
     background: $white;
     width: 100%;
 
+    &.is-scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+
+        &::after {
+            height: 0;
+        }
+
+        &>.c-header__main .c-header__left {
+            padding-left: 50px;
+        }
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -40,6 +56,16 @@
         margin-top: 4.3%;
         width: 151px;
         flex: 0 0 151px;
+
+        &.is-scroll {
+            margin-top: 0;
+            width: 120px;
+            flex: 0 0 120px;
+
+            &>.c-header__logoimg {
+                height: 71px;
+            }
+        }
     }
 
     .c-header__slogan {
@@ -124,9 +150,10 @@
     .c-header__right {
         width: 24.4%;
         padding: 1px 0;
-        max-width: 445px;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
     }
 
     .c-header__btn {

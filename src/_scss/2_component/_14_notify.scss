@@ -65,6 +65,14 @@
         }
     }
 
+    .c-notify__list {
+        display: none;
+
+        &.is-active {
+            display: block;
+        }
+    }
+
     .c-notify__content {
         font-feature-settings: "palt" 1;
         line-height: 1.8;

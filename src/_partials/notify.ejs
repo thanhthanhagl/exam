@@ -1,41 +1,76 @@
-<section class="c-notify">    
-    <div class="l-container l-container--w960">
-      <h2 class="c-title c-notify__title">お知らせ</h2>
-        <div class="c-notify__main">
-            <div class="c-notify__left">
-                <ul>
-                    <% if (typeof notify != 'undefined') { %>
-                        <% notify.label && notify.label.forEach((item,i) => { %>
-                          <% if (i == 0){ %>
-                            <li class="c-notify__itemlabel is-active"><%= item.name %></li>
-                          <% } 
-                          else { %>
-                            <li class="c-notify__itemlabel"><%= item.name %></li>
-                          <% } %>
-                          
-                        <% }) %>
-                      <% } %>
-                </ul>
-            </div>
-            <div class="c-notify__right">
-                <% if (typeof notify != 'undefined') { %>
-                    <% notify.post && notify.post.forEach(item => { %>
-                      <a class="c-notify__item" href="#">
-                        <div class="c-notify__content">
-                            <div class="c-notify__date"><%= item.date %></div>
-                            <div class="c-notify__name"><%= item.name %></div>
-                            <p class="c-notify__desc"><%= item.desc %></p>
-                            <% if (item.tag.length > 0) { %>
-                                <span class="c-notify__tag"><%= item.tag %></span>
-                                <% } %>
-                            </div>
-                      </a>
-                    <% }) %>
+<section class="c-notify" id="notify">
+  <div class="l-container l-container--w960">
+    <h2 class="c-title c-notify__title">お知らせ</h2>
+    <div class="c-notify__main">
+      <div class="c-notify__left">
+        <ul>
+          <% if (typeof notify !='undefined' ) { %>
+            <% notify.label && notify.label.forEach((item,i)=> { %>
+              <% if (i==0){ %>
+                <li class="c-notify__itemlabel is-active" data-id="<%= item.id %>">
+                    <%= item.name %>
+                </li>
+                <% } else { %>
+                  <li class="c-notify__itemlabel" data-id="<%= item.id %>">
+                      <%= item.name %>
+                  </li>
                   <% } %>
+
+                    <% }) %>
+                      <% } %>
+        </ul>
+      </div>
+      <div class="c-notify__right">
+        <% if (typeof notify !='undefined' ) { %>
+          <div class="c-notify__list is-active" id="1">
+            <% notify.post && notify.post.forEach(item=> { %>
+              <a class="c-notify__item" href="#">
+                <div class="c-notify__content">
+                  <div class="c-notify__date">
+                    <%= item.date %>
+                  </div>
+                  <div class="c-notify__name">
+                    <%= item.name %>
+                  </div>
+                  <p class="c-notify__desc">
+                    <%= item.desc %>
+                  </p>
+                  <% if (item.tag.length> 0) { %>
+                    <span class="c-notify__tag">
+                      <%= item.tag %>
+                    </span>
+                    <% } %>
+                </div>
+              </a>
+              <% }) %>
+          </div>
+          <% notify.post && notify.post.forEach(item=> { %>
+            <div class="c-notify__list" id="<%= item.id %>">
+              <a class="c-notify__item" href="#">
+                <div class="c-notify__content">
+                  <div class="c-notify__date">
+                    <%= item.date %>
+                  </div>
+                  <div class="c-notify__name">
+                    <%= item.name %>
+                  </div>
+                  <p class="c-notify__desc">
+                    <%= item.desc %>
+                  </p>
+                  <% if (item.tag.length> 0) { %>
+                    <span class="c-notify__tag">
+                      <%= item.tag %>
+                    </span>
+                    <% } %>
+                </div>
+              </a>
             </div>
-        </div>
-        <a href="#" class="c-btn c-notify__btn">
-          <span class="c-notify__btntxt">お知らせ一覧</span>
-      </a>
-    </div>    
+            <% }) %>
+      </div>
+      <% } %>
+    </div>
+    <a href="#" class="c-btn c-notify__btn">
+      <span class="c-notify__btntxt">お知らせ一覧</span>
+    </a>
+  </div>
 </section>
