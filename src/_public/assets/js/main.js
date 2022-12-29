@@ -27,20 +27,23 @@ $(document).ready(function () {
         cssEase: 'linear'
     });
     $('.c-home__slides').slick({
-        infinite: true,
+        speed: 5000,
         autoplay: true,
-        speed: 10000,
-        autoplayspeed:1000,
-        arrows: false,
-        dots: false,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        slidetoShow:6,
-        slidetoScroll:6
+        autoplaySpeed: 0,
+        cssEase: 'linear',
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        swipeToSlide: true,
+        centerMode: true,
+        focusOnSelect: true,
+        arrows:false,
+        dots:false
     });
     // notify label 
     $(".c-notify__itemlabel").click(function () {
         $(".c-notify__itemlabel").removeClass("is-active");
         $(this).addClass("is-active");
     })
+
 });

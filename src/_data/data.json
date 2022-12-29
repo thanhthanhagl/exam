@@ -119,30 +119,6 @@
     {
       "img":"./assets/img/slide6.jpg",
       "alt":"co-operate"
-    },
-    {
-      "img":"./assets/img/slide1.jpg",
-      "alt":"room"
-    },
-    {
-      "img":"./assets/img/slide2.jpg",
-      "alt":"staff"
-    },
-    {
-      "img":"./assets/img/slide3.jpg",
-      "alt":"building"
-    },
-    {
-      "img":"./assets/img/slide4.jpg",
-      "alt":"nurse"
-    },
-    {
-      "img":"./assets/img/slide5.jpg",
-      "alt":"counter"
-    },
-    {
-      "img":"./assets/img/slide6.jpg",
-      "alt":"co-operate"
     }
   ],
   "info":[
@@ -206,32 +182,25 @@
       "th":"9：00 - 13：00",
       "td":[
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":false,
-          "txt":"no"
+          "status":false
         }
       ]
     },
@@ -239,32 +208,25 @@
       "th":"14：00 - 18：00",
       "td":[
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":false,
-          "txt":"no"
+          "status":false
         },
         {
-          "status":true,
-          "txt":"yes"
+          "status":true
         },
         {
-          "status":false,
-          "txt":"no"
+          "status":false
         },
         {
-          "status":false,
-          "txt":"no"
+          "status":false
         }
       ]
     }

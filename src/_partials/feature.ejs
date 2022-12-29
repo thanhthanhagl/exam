@@ -5,7 +5,7 @@
             <div class="c-feature__list">
                 <% if (typeof feature != 'undefined'){%>
                     <% feature.forEach((item,i)=> { %>
-                        <a class="c-feature__item" href="#">
+                        <div class="c-feature__item">
                             <div class="c-feature__wrapimg">
                                  <img class="c-feature__img" src="<%= item.img %>" alt="<% item.title %>">
                             </div>
@@ -15,7 +15,7 @@
                                     else { %><%= (i + 1) %><% } %></span><%= item.title %></h3>
                                 <p class="c-feature__desc"><%- item.desc %></p>
                             </div>
-                        </a>
+                        </div>
                 <% }) %>
                 <% } %>
             </div>

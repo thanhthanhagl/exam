@@ -7,7 +7,7 @@
                 <img src="./assets/img/contact.jpg" alt="クリニック概要" class="c-contact__img">
             </div>
             <div class="c-contact__info">
-                <table>
+                <table class="c-contact__table">
                     <tbody>
                         <tr class="c-contact__tr">
                             <th class="c-contact__th">受付時間</th>
@@ -26,7 +26,7 @@
                                 </th>
                                 <% item.td.forEach(i=> { %>
                                     <td class="c-contact__td">
-                                        <span class="c-contact__status<% if(i.status == false){ %> is-off<% } else{ %> is-open<% } %>"><%= i.txt %></span>
+                                        <i class="c-contact__status<% if(i.status == false){ %> is-off<% } else{ %> is-open<% } %>"></i>
                                     </td>
                                     
                             <% }) %>
@@ -41,11 +41,11 @@
                     <li class="c-contact__item">
                         <span class="c-contact__titleitem">FAX </span><span class="c-contact__txtitem">092-834-6900</span>
                     </li>
-                    <li class="c-contact__item">
+                    <li class="c-contact__item c-contact__address">
                         <span class="c-contact__titleitem">住所</span><span class="c-contact__txtitem">〒814-0133 福岡県福岡市城南区七隈1-18-21</span>
                     </li>
                 </ul>
-                <a href="#" class="c-btn">交通アクセス</a>
+                <a href="#" class="c-contact__btn c-btn">交通アクセス</a>
             </div>
         </div>
         </div>
