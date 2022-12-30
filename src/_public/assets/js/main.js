@@ -49,7 +49,7 @@ $(document).ready(function () {
             {
                 breakpoint: 767,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 1
                 }
             }
         ]
@@ -146,22 +146,36 @@ $(document).ready(function () {
     //---------menu mobile------------
     $(".c-header__iconmenu").click(function () {
         if ($(window).scrollTop() < 30) {
-          $(".c-header").toggleClass("is-scroll");
-          $('.c-backtotop').removeClass("is-scroll");
+            $(".c-header").toggleClass("is-scroll");
+            $('.c-backtotop').removeClass("is-scroll");
         }
         $(".c-header__gnavmb").toggleClass("is-open");
         $(this).toggleClass("is-open");
         $(".c-header__left").toggleClass("is-open");
-      });
-      var parent = $(".c-header__linkmb").next();
-      if (parent) {
+    });
+    var parent = $(".c-header__linkmb").next();
+    if (parent) {
         parent.parent().addClass("is-parent");
-      }
-      $(".c-header__linkmb").click(function () {
-        $(".c-header__submenumb").removeClass("is-click");
+    }
+    $(".c-header__linkmb").click(function () {
+        var item = $(this).next();
+        if (item.length > 0) {
+            $(this).next().toggleClass("is-click");
+            $(this).parent().toggleClass("is-show");
+        }
+        else {
+            $(".c-header__subgnavmb").removeClass("is-click");
+            $(".c-header__gnavmb").toggleClass("is-open");
+            $(".c-header__iconmenu").toggleClass("is-open");
+            $('body').toggleClass("is-fixed");
+            $(".c-header__left").toggleClass("is-open");
+        }
+    });
+    $(".c-header__sublinkmb").click(function () {
+        $(".c-header__subgnavmb").removeClass("is-click");
         $(".c-header__gnavmb").toggleClass("is-open");
-          $(".c-header__iconmenu").toggleClass("is-open");
-          $('body').toggleClass("is-fixed");
-          $(".c-header__left").toggleClass("is-open");
-      });
+        $(".c-header__iconmenu").toggleClass("is-open");
+        $('body').toggleClass("is-fixed");
+        $(".c-header__left").toggleClass("is-open");
+    });
 });

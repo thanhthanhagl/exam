@@ -25,11 +25,17 @@ footer
         margin-top: 46px;
         display: flex;
         justify-content: space-between;
+        @include sp {
+            flex-direction: column;
+        }
     }
 
     .c-footer__menu {
         width: 75%;
         max-width: 680px;
+        @include sp {
+            width: 100%;
+        }
     }
 
     .c-footer__linkmenu {
@@ -89,6 +95,9 @@ footer
         width: 26.2%;
         @include tab {
             flex: 0 0 216px;
+        }
+        @include sp {
+            width: 100%;
         }
     }
 
