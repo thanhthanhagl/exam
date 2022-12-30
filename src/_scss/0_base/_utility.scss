@@ -6,6 +6,27 @@
 //	margin-top: -100px;
 //	padding-top: 100px;
 //}
+.u-pc {
+    @include tab {
+        display: none;
+    }
+}
+
+.u-contenttab {
+    display: none;
+
+    @include tab {
+        display: contents;
+    }
+}
+
+.u-notpc {
+    display: none;
+
+    @include tab {
+        display: block;
+    }
+}
 
 //------------------------------------------------------------
 // margin

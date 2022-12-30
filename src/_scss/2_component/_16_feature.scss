@@ -2,18 +2,28 @@
     .c-feature__main {
         margin-top: 93px;
         border: 1px solid $black;
+        @include sp {
+            border: none;
+        }
     }
 
     .c-feature__list {
         display: flex;
         justify-content: space-between;
         margin-top: 53px;
+        @include sp {
+            flex-direction: column;
+        }
     }
 
     .c-feature__item {
         max-width: 380px;
         width: 31.8%;
         display: block;
+        @include sp {
+            width: 100%;
+            margin: 0 auto;
+        }
 
         &:nth-child(3) {
             .c-feature__number {

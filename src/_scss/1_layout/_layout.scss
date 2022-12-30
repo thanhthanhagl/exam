@@ -9,6 +9,10 @@ body {
     @include sp {
         min-width: 320px;
     }
+
+    &.is-fixed {
+        overflow: hidden;
+    }
 }
 
 //-------------------------------------------------------
@@ -23,6 +27,9 @@ body {
     &--w1200 {
         max-width: 1240px;
         padding: 0 20px;
+        @include sp {
+            max-width: 600px;
+        }
     }
 
     &--w960 {

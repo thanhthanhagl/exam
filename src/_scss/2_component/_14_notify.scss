@@ -6,10 +6,24 @@
         display: flex;
         justify-content: space-between;
         margin-top: 52px;
+        @include sp {
+            flex-direction: column;
+        }
     }
 
     .c-notify__left {
         width: 23%;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .c-notify__listlabel {
+        @include sp {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
 
     .c-notify__itemlabel {
@@ -28,6 +42,9 @@
         font-size: 1.6rem;
         letter-spacing: 1.3px;
         line-height: 1.8;
+        @include sp {
+            width: 108px;
+        }
 
         &.is-active {
             background-color: $green;
@@ -43,6 +60,9 @@
                 position: absolute;
                 left: 96%;
                 top: 12%;
+                @include tab {
+                    left: 95%;
+                }
             }
         }
 
@@ -53,12 +73,18 @@
 
     .c-notify__right {
         width: 70.8%;
+        @include sp {
+            width: 100%;
+        }
     }
 
     .c-notify__item {
         padding: 16px 50px 14px;
         border-top: 1px solid #afafaf;
         display: block;
+        @include tab {
+            padding: 8px 50px;
+        }
 
         &:last-child {
             border-bottom: 1px solid #afafaf;
@@ -78,6 +104,9 @@
         line-height: 1.8;
         letter-spacing: 0;
         display: flex;
+        @include tab {
+            flex-wrap: wrap;
+        }
     }
 
     .c-notify__date {
@@ -86,6 +115,9 @@
         font-weight: 500;
         font-size: 1.6rem;
         margin-right: 15px;
+        @include tab {
+            width: 20%;
+        }
     }
 
     .c-notify__name {
@@ -95,6 +127,9 @@
         color: $green;
         margin-right: 14px;
         width: 56px;
+        @include tab {
+            width: 15%;
+        }
     }
 
     .c-notify__desc {
@@ -103,6 +138,10 @@
         color: $black;
         letter-spacing: 1.8px;
         margin-right: 13px;
+        @include tab {
+            width: 100%;
+            order: 2;
+        }
     }
 
     .c-notify__tag {

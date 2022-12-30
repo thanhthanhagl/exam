@@ -3,6 +3,12 @@
     justify-content: flex-end;
     padding-left: 220px;
     height: calc(100vh - 100px);
+    @include tab {
+        padding-left: 64px;
+    }
+    @include sp {
+        padding-left: 41px;
+    }
 
     .c-mainvisual__main {
         width: 100%;
@@ -16,26 +22,39 @@
     .c-mainvisual__slide {
         background-repeat: no-repeat;
         background-size: cover;
-        // height: 960px;
         height: calc(100vh - 100px);
         border-radius: 20px 0 0 20px;
+        @include sp {
+            border-radius: 10px 0 0 10px;
+            height: calc(100vh - 60px);
+            background-size: 100% 100%;
+        }
     }
 
     .c-mainvisual__slidemain {
         background-image: url("./assets/img/main1.jpg");
+        @include sp {
+            background-image: url("./assets/img/main1sp.jpg");
+        }
     }
 
     .c-mainvisual__slidemiddle {
         background-image: url("./assets/img/main2.jpg");
+        @include sp {
+            background-image: url("./assets/img/main2sp.jpg");
+        }
     }
 
     .c-mainvisual__slideend {
         background-image: url("./assets/img/main3.jpg");
+        @include sp {
+            background-image: url("./assets/img/main3sp.jpg");
+        }
     }
 
     .c-mainvisual__inner {
         position: absolute;
-        top: 81%;
+        top: 77.9%;
         left: 51%;
         transform: translate(-50%, -50%);
         display: flex;
@@ -44,6 +63,10 @@
         width: 98%;
         margin: 0 auto;
         z-index: 1;
+        @include tab {
+            flex-direction: column;
+            max-width: 960px;
+        }
     }
 
     .c-mainvisual__title {
@@ -66,6 +89,19 @@
         display: block;
         padding: 13px 0 12px 21px;
         font-feature-settings: "palt" 1;
+        @include laptop {
+            font-size: 3rem;
+        }
+        @include tab {          
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            line-height: 2.3;
+            padding: 5px 0 5px 13px;
+            margin-bottom: 18px;
+        }
+        @include sp {            
+            font-size: 1.8rem;
+        }
 
         &::after {
             content: "";
@@ -81,18 +117,26 @@
     }
 
     .c-mainvisual__news {
-        max-width: 600px;
-        height: 60px;
+        max-width: 520px;
         width: 58%;
         border-radius: 30px;
         background-color: $white;
-        padding: 1.1% 2.7%;
+        padding: 1% 2.7% 0.8%;
         font-feature-settings: "palt" 1;
         display: flex;
         justify-content: space-between;
         position: absolute;
         right: 0;
         bottom: 13px;
+        @include laptop {
+            width: 50%;
+        }
+        @include tab {
+            width: 90%;
+            position: relative;
+            margin-top: 30px;
+            max-width: 345px;
+        }
 
         &:hover {
             opacity: 1;
@@ -113,6 +157,8 @@
             position: relative;
             right: 0;
             top: 8px;
+            @include tab{}
+            top: 5px;
         }
     }
 
@@ -123,6 +169,10 @@
         letter-spacing: 1.3px;
         line-height: 1.8;
         color: $green;
+        @include laptop {
+            font-size: 1.3rem;
+            letter-spacing: 0;
+        }
     }
 
     .c-mainvisual__date {
@@ -133,6 +183,9 @@
         line-height: 2;
         color: $black;
         margin-left: -8px;
+        @include laptop {
+            font-size: 1.3rem;
+        }
     }
 
     .c-mainvisual__post {
@@ -143,13 +196,24 @@
         line-height: 2;
         letter-spacing: 1.6px;
         transform: translateX(-5px);
+        @include laptop {
+            font-size: 1.3rem;
+        }
     }
 
     .c-mainvisual__scroll {
         position: relative;
-        top: 85%;
-        right: 44px;
+        top: 84.8%;
+        left: 0;
+        padding-left: 3.8%;
         transition: all 3s;
+        transform: translateX(-50%);
+        @include laptop {
+            padding-left: 1.9%;
+        }
+        @include tab {
+            padding-left: 0;
+        }
 
         &::after {
             content: "";
@@ -159,7 +223,7 @@
             position: relative;
             background-color: $green;
             top: -3px;
-            left: 50%;
+            left: 40%;
             transform: translateX(-50%);
             animation: pathmove 1.4s ease-in-out infinite;
         }    

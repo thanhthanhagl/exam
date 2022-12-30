@@ -6,12 +6,19 @@
     .c-contact__main {
         display: flex;
         margin-top: 53px;
+        @include tab {
+            flex-direction: column;
+        }
     }
 
     .c-contact__wrapimg {
         width: 50%;
         max-width: 600px;
         border-radius: 10px;
+        @include tab {
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 
     .c-contact__img {
@@ -19,9 +26,14 @@
     }
 
     .c-contact__info {
-        padding-top: 50px;
+        padding-top: 51px;
         padding-left: 4.2%;
         width: 50%;
+        @include tab {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
 
     .c-contact__table {
@@ -151,6 +163,9 @@
     .c-contact__btn {
         margin-top: 29px;
         max-width: 298px;
+        @include tab {
+            margin: 29px auto 0;
+        }
     }
 
     .c-contact__map {

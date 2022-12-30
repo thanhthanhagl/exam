@@ -4,6 +4,9 @@
     position: relative;
     background: $white;
     width: 100%;
+    @include tab {
+        z-index: 99;
+    }
 
     &.is-scroll {
         position: fixed;
@@ -17,7 +20,15 @@
         }
 
         &>.c-header__main .c-header__left {
-            padding-left: 50px;
+            padding: 7px 10px 11px 50px;
+            @include laptop {
+                padding: 7px 10px 11px 0;
+
+                &>.c-header__slogan {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
@@ -33,6 +44,17 @@
         background-image: url("./assets/img/bg-header.png");
         background-repeat: no-repeat;
         background-size: cover;
+        @include tab {
+            background-image: url("./assets/img/bg-headersp.png");
+            top: -85%;
+            left: -4%;
+            height: 230%;
+        }
+        @include sp {
+            top: 0;
+            left: 0;
+            height: 141%;
+        }
     }
 
     .c-header__main {
@@ -42,6 +64,10 @@
         justify-content: space-between;
         padding: 0 35px 0 34px;
         height: 100px;
+        @include sp {
+            padding: 0 23px;
+            height: 60px;
+        }
     }
 
     .c-header__left {
@@ -50,17 +76,55 @@
         display: flex;
         justify-content: space-between;
         padding: 24px 10px 20px 0;
+        @include laptop {
+            flex-direction: column;
+            flex: 0 0 280px;
+        }
+        @include tab {
+            flex-direction: row;
+        }
+        @include sp {
+            padding: 18px 0;
+            flex: 0 0 294px;
+        }
+
+        &.is-open {
+            padding: 15px 0;
+
+            &>.c-header__logo {
+                flex: 0 0 49px;
+                width: 49px;
+                padding-left: 13px;
+            }
+
+            &>.c-header__slogan {
+                margin-top: 7px;
+            }
+        }
     }
 
     .c-header__logo {
         margin-top: 4.3%;
         width: 151px;
         flex: 0 0 151px;
+        @include laptop {
+            margin-top: 0;
+            order: 2;
+        }
+        @include  tab {
+            width: 64px;
+            flex: 0 0 64px;
+        }
 
         &.is-scroll {
             margin-top: 0;
             width: 120px;
             flex: 0 0 120px;
+            
+            @include laptop {
+                width: 90px;
+                flex: 0 0 90px;
+            }
 
             &>.c-header__logoimg {
                 height: 71px;
@@ -75,14 +139,35 @@
         letter-spacing: 0;
         color: $sub-green;
         margin-top: 17px;
+        @include laptop {
+            order: 1;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        @include tab {
+            font-size: 1.5rem;
+            order: 2;
+        }
+        @include sp {
+            letter-spacing: -0.4px;
+            margin-top: 4px;
+            font-feature-settings: "palt" 1;
+        }
     }
 
     .c-header__nav {
         width: 36%;
         padding: 12px 10px;
         flex: 1;
-        max-width: 672px;
+        max-width: 674px;
         margin-left: -13px;
+        @include laptop {
+            max-width: 820px;
+            margin-left: 0;
+        }
+        @include tab {
+            display: none;
+        }
     }
 
     .c-header__menu {
@@ -123,6 +208,9 @@
                 margin-bottom: 7px;
             }
         }
+        @include laptop {
+            font-size: 1.4rem;
+        }
     }
 
     .c-header__taxi {
@@ -149,11 +237,17 @@
 
     .c-header__right {
         width: 24.4%;
-        padding: 1px 0;
+        max-width: 445px;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        flex-wrap: wrap;
+        @include laptop {
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 200px;
+        }
+        @include tab {
+            display: none;
+        }
     }
 
     .c-header__btn {
@@ -166,6 +260,10 @@
         padding: 6px 0;
         margin-top: 2px;
         position: relative;
+        @include laptop {
+            order: 2;
+            width: 100%;
+        }
 
         &:hover {
             opacity: 1;
@@ -207,6 +305,12 @@
         line-height: 1.8;
         letter-spacing: 1.6px;
         color: $green;
+        width: 180px;
+        flex: 0 0 180px;
+        @include laptop {
+            order: 1;
+            flex: 0;
+        }
 
         &::before {
             content: "";
@@ -220,6 +324,151 @@
             left: 18px;
             top: 2px;
             margin-right: 29px;
+        }
+    }
+
+    .c-header__iconmenu {
+        display: none;
+
+        @include tab {
+            position: relative;
+            right: -5.5%;
+            width: 40px;
+            height: 40px;
+            flex: 0 0 40px;
+            transform: translateX(-50%);
+            top: 11px;
+            margin-left: 20px;
+            display: block;
+            border-radius: 50%;
+            background-color: $yellow;
+
+            &.is-open {
+                .c-header__line {
+                    &:first-child {
+                        transform: translate(0, 6px) rotate(-23deg);
+                    }
+    
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+    
+                    &:last-child {
+                        transform: translate(0, -5px) rotate(-157deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .c-header__line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        width: 26px;
+        margin: 0 auto;
+        background-color: $white;
+
+        &:first-child {
+            top: 35%;
+        }
+
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:last-child {
+            bottom: 35%;
+        }
+    }
+
+    .c-header__overlay {
+        display: none;
+
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0 35px 0 20px;
+        }
+    }
+
+    .c-header__gnavmb {
+        display: none;
+
+        @include sp {
+            position: absolute;
+            top: 97%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(255, 255, 255);
+            padding: 10px 20px;
+            display: none;
+            z-index: 999;
+            overflow-y: auto;
+
+            &.is-open {
+                display: block;
+                overflow-y: scroll;
+                position: fixed;
+                height: 100%;
+                top: 60px;
+                left: 0;
+            }
+        }
+    }
+
+    .c-header__navmb {
+        display: none;
+
+        @include sp {
+            display: block;
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .c-header__linkmb {
+        display: block;
+        border-top: 1px solid #afafaf;
+        color: $green;
+        font-family: $sub-font;
+        font-weight: 500;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+        line-height: 1.75;
+        text-align: center;
+        padding: 15px 0 17px;
+
+        &.is-active {
+            opacity: 0.7;
+        }
+
+        &.is-parent {
+            &::after {
+                content: "";
+                display: block;
+                width: 12px;
+                background-color: $green;
+                height: 1px;
+                position: relative;
+                right: 50px;
+                top: 30px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                width: 1px;
+                background-color: $green;
+                height: 12px;
+                position: relative;
+                right: 56px;
+                top: 24px;
+            }
         }
     }
 }

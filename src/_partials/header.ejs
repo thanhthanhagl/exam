@@ -1,7 +1,12 @@
 <header class="c-header">  
   <div class="c-header__main">
     <div class="c-header__left">
-      <a class="c-header__logo" href="<%= BASE_URL %>index.html"><img class="c-header__logoimg" src="./assets/img/logo.png" alt="Matsuguchi"></a>
+      <a class="c-header__logo" href="<%= BASE_URL %>index.html">
+        <picture>
+          <source media="(max-width:1023px)" srcset="./assets/img/logosp.png">
+          <img class="c-header__logoimg" src="./assets/img/logo.png" alt="Matsuguchi">
+        </picture>
+      </a>
     <p class="c-header__slogan">松口内科・循環器内科クリニック</p>
     </div>
     <nav class="c-header__nav">
@@ -20,5 +25,32 @@
       <a href="#" class="c-header__btn"><span class="c-header__txt">WEB 予約</span></a>
       <p class="c-header__tel">092-407-5555</p>
     </div>
+    <div class="c-header__iconmenu u-notpc">
+      <i class="c-header__line"></i>
+      <i class="c-header__line"></i>
+      <i class="c-header__line"></i>
+    </div>
+  </div>  
+<nav class="c-header__gnavmb u-notpc">      
+  <ul class="c-header__overlay">
+    <% if (typeof linklists != 'undefined') { %>
+      <% linklists.menufooter && linklists.menufooter.forEach(link => { %>
+        <li class="c-header__navmb">
+          <a class="c-header__linkmb <% if (link.current || link.active) { %>is-active<% } %>" href="<%= link.url %>"><%= link.title %></a>
+          <% if(link.sub){ %>          
+              <ul class="c-header__subgnavmb">
+                <% link.sub.forEach(item => { %>
+                <li class="c-header__subnavmb">
+                  <a href="<%= item.url %>" class="c-header__sublinkmb"><%= item.title %></a>
+                </li>                
+            <% }) %>
+              </ul>
+          <% } %>
+        </li>
+      <% }) %>
+    <% } %>  
+  </ul>
+  <div class="c-header__btninner">
   </div>
+</nav>
 </header>

@@ -8,6 +8,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 55px;
+        @include sp {
+            flex-direction: column;
+        }
     }
 
     .c-info__wrapitem {
@@ -17,7 +20,11 @@
         padding: 26px 20px 22px;
         border-radius: 10px;
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
-        margin-bottom: 29px;
+        margin-bottom: 28px;
+        @include sp {
+            width: 100%;
+            margin: 0 auto 28px;
+        }
     }
 
     .c-info__item {
@@ -29,7 +36,7 @@
     }
 
     .c-info__icon {
-        height: 74px;
+        height: 76px;
     }
 
     .c-info__name {
@@ -50,7 +57,7 @@
         line-height: 1.75;
         text-align: left;
         max-width: 320px;
-        margin-top: 5px;
+        margin-top: 4px;
         height: 153px;
     }
 
@@ -62,6 +69,9 @@
     .c-info__parallax {
         position: relative;
         height: 600px;
+        @include tab {
+            height: 400px;
+        }
     }
 }
 
@@ -95,5 +105,15 @@
     left: 0;
     z-index: -1;
     background-repeat: no-repeat;
-    background-position: 0 -10%;
+    background-position: 0 -25%;
+    background-size: 100%;
+    @include tab {
+        background-size: 150% 100%;
+        background-position: 25% -25%;
+    }
+    @include sp {
+        background-size: 100%;
+        background-position: 0;
+        height: 400px;
+    }
 }

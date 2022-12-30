@@ -7,21 +7,38 @@
 
     .c-home__main {
         display: flex;
+        @include tab {
+            flex-direction: column;
+        }
     }
 
     .c_home__left {
         width: 50%;
+        @include tab {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .c-home__img {
         position: relative;
         transform: translateY(-50%);
         top: 53.6%;
+        @include tab {
+            top: 0;
+            transform: translateY(0);
+        }
     }
 
     .c-home__right {
         width: 50%;
         padding-left: 51px;
+        @include tab {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 690px;
+            padding: 0 20px;
+        }
     }
 
     .c-home__top {
@@ -35,6 +52,9 @@
         letter-spacing: 2px;
         line-height: 1.8;
         color: $green;
+        @include tab {
+            text-align: center;
+        }
     }
 
     .c-home__text {
@@ -44,7 +64,7 @@
         line-height: 1.75;
         font-weight: 500;
         letter-spacing: 0;
-        margin-top: 24px;
+        margin-top: 23px;
     }
 
     .c-home__edit {
@@ -58,7 +78,7 @@
         color: $black;
         font-weight: 500;
         line-height: 1.75;
-        margin-top: 22px;
+        margin-top: 23px;
     }
 
     .c-home__boxleft {
@@ -79,6 +99,9 @@
 
         &>.c-home__heading {
             margin-left: -4px;
+            @include sp {
+                margin-left: 0;
+            }
         }
     }
 
@@ -96,7 +119,7 @@
         font-size: 1.6rem;
         letter-spacing: 1.3px;
         line-height: 1.7;
-        margin-bottom: 6px;
+        margin-bottom: 5.5px;
 
         &:last-child {
             margin-bottom: 0;
@@ -119,8 +142,11 @@
     }
 
     .c-home__btn {
-        margin-top: 43px;
-        padding: 12px 0 15px;
+        margin-top: 45px;
+        padding: 12px 0 14px;
+        @include tab {
+            margin: 45px auto 0;
+        }
     }
 
     .c-home__slides {
@@ -144,7 +170,7 @@
         background: -moz-linear-gradient(left, rgb(255, 218, 77) 50%, transparent 50%);
         background: linear-gradient(left, rgb(255, 218, 77) 50%, transparent 50%);
         background-repeat: no-repeat;
-        background-size: 200% 4px;
+        background-size: 194% 4px;
         background-position: 100% 100%;
         transition: 2s;
 

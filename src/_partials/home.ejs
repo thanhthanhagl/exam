@@ -4,7 +4,10 @@
             <h2 class="c-title c-home__title">訪問診療</h2>
             <div class="c-home__main">
                 <div class="c_home__left">
-                    <img class="c-home__img" src="./assets/img/map.png" alt="訪問診療">
+                    <picture>
+                        <source media="(max-width:1023px)" srcset="./assets/img/mapsp.png">
+                        <img class="c-home__img" src="./assets/img/map.png" alt="訪問診療">
+                    </picture>
                 </div>
                 <div class="c-home__right">
                     <div class="c-home__top">
@@ -12,11 +15,13 @@
                         <p class="c-home__text">病院への受診が困難な方に訪問診療いたします。<br>
                             訪問診療とは通院が困難な患者様のお宅に医師が定期的に診療に伺い、自宅での療養生活をサポートするものです。<br>
                             病院の主治医、訪問看護師やケアマネージャーなど多くの方々と連携して自宅という自由で安らげる環境でのより良い医療を提供いたします。<br>
-                            <span class="c-home__edit">「訪問診療」をご希望の方は<span class="c-home__scroll">お電話、もしくは直接来院されてください。</span></span><br>
+                            <span class="c-home__edit">「訪問診療」をご希望の方は<span
+                                    class="c-home__scroll">お電話、もしくは直接来院されてください。</span></span><br>
                             ご家族だけでも構いません。ご自宅が可能な範囲かお気軽にお問い合せください。
-                            </p>
-                        <div class="c-home__box"><span class="c-home__boxleft">訪問診療の範囲</span><span class="c-home__boxright">西区、早良区、城南区、中央区、南区
-                        </span></div>
+                        </p>
+                        <div class="c-home__box"><span class="c-home__boxleft">訪問診療の範囲</span><span
+                                class="c-home__boxright">西区、早良区、城南区、中央区、南区
+                            </span></div>
                     </div>
                     <div class="c-home__bottom">
                         <h3 class="c-home__heading">このようなお困りごとはありませんか？</h3>
@@ -36,12 +41,10 @@
         </div>
     </div>
     <div class="c-home__slides">
-        <% if (typeof home != 'undefined') {
-            home.forEach(item=> { %>
-                <div class="c-home__wrapimg">
-                    <img class="c-home__slide" src="<%= item.img %>" alt="<%= item.alt %>">
-                </div>
-        <%    })
-        } %>
+        <% if (typeof home !='undefined' ) { home.forEach(item=> { %>
+            <div class="c-home__wrapimg">
+                <img class="c-home__slide" src="<%= item.img %>" alt="<%= item.alt %>">
+            </div>
+            <% }) } %>
     </div>
 </section>

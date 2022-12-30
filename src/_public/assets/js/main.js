@@ -38,7 +38,21 @@ $(document).ready(function () {
         centerMode: true,
         focusOnSelect: true,
         arrows: false,
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1023,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
     // notify label 
     $(".c-notify__itemlabel").click(function () {
@@ -54,7 +68,7 @@ $(document).ready(function () {
     $(".c-mainvisual__btntxt").click(function () {
         var tag = $(this).attr("href");
         var top = tag.offsetTop;
-        $('html, body').animate({ scrollTop: $(tag).position().top - 100}, 800);
+        $('html, body').animate({ scrollTop: $(tag).position().top - 100 }, 800);
         return false;
     });
 
@@ -124,4 +138,30 @@ $(document).ready(function () {
             }
         });
     });
+    //data bachground fixed
+    if ($(window).width() < 768) {
+        $('.parallax').attr("data-parallax-image", "./assets/img/bgfixedsp.jpg");
+        $('.parallax').css("background-image", "url('./assets/img/bgfixedsp.jpg')");
+    }
+    //---------menu mobile------------
+    $(".c-header__iconmenu").click(function () {
+        if ($(window).scrollTop() < 30) {
+          $(".c-header").toggleClass("is-scroll");
+          $('.c-backtotop').removeClass("is-scroll");
+        }
+        $(".c-header__gnavmb").toggleClass("is-open");
+        $(this).toggleClass("is-open");
+        $(".c-header__left").toggleClass("is-open");
+      });
+      var parent = $(".c-header__linkmb").next();
+      if (parent) {
+        parent.parent().addClass("is-parent");
+      }
+      $(".c-header__linkmb").click(function () {
+        $(".c-header__submenumb").removeClass("is-click");
+        $(".c-header__gnavmb").toggleClass("is-open");
+          $(".c-header__iconmenu").toggleClass("is-open");
+          $('body').toggleClass("is-fixed");
+          $(".c-header__left").toggleClass("is-open");
+      });
 });
