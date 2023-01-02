@@ -1,6 +1,9 @@
 .c-contact {
     .c-contact__contain {
         margin-top: 11.1%;
+        @include sp {
+            margin-top: 14%;
+        }
     }
 
     .c-contact__main {
@@ -8,6 +11,7 @@
         margin-top: 53px;
         @include tab {
             flex-direction: column;
+            margin-top: 55px;
         }
     }
 
@@ -33,6 +37,10 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
+            padding-left: 0;
+        }
+        @include sp {            
+            padding-top: 25px;
         }
     }
 
@@ -46,6 +54,9 @@
             &>.c-contact__th {
                 &:first-child {
                     letter-spacing: 1.3px;
+                    @include sp {
+                        letter-spacing: 0;
+                    }
                 }
                 padding: 13px 0 8px 6px;
 
@@ -55,6 +66,13 @@
                     font-feature-settings: "palt" 1;
                     padding-right: 10px;
                     padding-left: 0;
+                    @include sp {
+                        letter-spacing: -4px;
+                        width: 12%;
+                    }
+                }
+                @include sp {
+                    padding: 11px 0 7px;
                 }
             }
         }
@@ -65,6 +83,18 @@
                 letter-spacing: 0;
                 text-align: right;
                 padding-right: 9px;
+                @include sp {
+                    width: 31%;
+                    letter-spacing: 0.3px;
+                }
+            }
+        }
+
+        &:last-child {
+            @include sp {
+                &>.c-contact__td {
+                    padding: 21px 0 21px 4px;
+                }
             }
         }
     }
@@ -79,19 +109,30 @@
         color: $black;
         width: 9%;
         padding: 9px 0 12px;
-        border-bottom: 1px solid #afafaf;  
+        border-bottom: 1px solid #afafaf;
+        @include sp {
+            font-size: 1.4rem;
+            width: 8%;
+            padding: 12px 0;
+        }
     }
 
     .c-contact__td {
         text-align: center;
         padding: 10px 0 9px 4px;
         border-bottom: 1px solid #afafaf;
+        @include sp {
+            padding: 19px 0 22px 4px;
+        }
         
         &:last-child {
             &>.c-contact__status {
                 &.is-off {
                     &::before {
                         left: 44%;
+                        @include sp {
+                            left: 39%;
+                        }
                     }
                 }
             }
@@ -106,6 +147,9 @@
                 content: "\f111";
                 font-style: normal;
                 color: $green;
+                @include sp {
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -120,16 +164,27 @@
                 left: 53%;
                 top: -2px;
                 transform: translateX(-50%);
+                @include sp {
+                    width: 10px;
+                    left: 55%;
+                    top: 2px;
+                }
             }
         }
     }
 
     .c-contact__contact {
         margin-top: 25px;
+        @include sp {
+            margin-top: 10px;
+        }
     }
 
     .c-contact__item {
         margin-bottom: 3px;
+        @include sp {
+            margin-bottom: -4px;
+        }
     }
 
     .c-contact__titleitem {
@@ -154,9 +209,25 @@
 
     .c-contact__address {
         margin-top: 16px;
+        @include sp {
+            margin-top: 2px;
+        }
+
+        &>.c-contact__titleitem {
+            @include sp {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
 
         &>.c-contact__txtitem {
             margin-left: 15px;
+            @include sp {
+                display: inline-block;
+                margin-top: 2px;
+                margin-left: 11px;
+
+            }
         }
     }
 
@@ -166,11 +237,19 @@
         @include tab {
             margin: 29px auto 0;
         }
+        @include sp {
+            margin: 16px auto 0;
+            max-width: 333px;
+        }
     }
 
     .c-contact__map {
         margin-top: 99px;
         height: 500px;
+        @include sp {
+            height: 400px;
+            margin-top: 82px;
+        }
     }
 
     .c-contact__iframe {

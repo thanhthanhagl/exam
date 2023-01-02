@@ -1,0 +1,14 @@
+<div class="c-fixed">
+    <div class="c-fixed__main">
+        <% if (typeof fixed != 'undefined'){
+            fixed.forEach(item => { %>
+                <a href="<%= item.link %>" class="c-fixed__item">
+                    <div class="c-fixed__wrapicon">
+                        <img src="<%= item.img %>" alt="<%= item.text %>" class="c-fixed__icon">
+                    </div>
+                    <span class="c-fixed__txt"><%= item.text %></span>
+                </a>
+        <%    })
+        } %>
+    </div>
+</div>

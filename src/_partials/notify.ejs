@@ -3,21 +3,35 @@
     <h2 class="c-title c-notify__title">お知らせ</h2>
     <div class="c-notify__main">
       <div class="c-notify__left">
-        <ul class="c-notify__listlabel">
+        <ul class="c-notify__listlabel pc-only">
           <% if (typeof notify !='undefined' ) { %>
             <% notify.label && notify.label.forEach((item,i)=> { %>
               <% if (i==0){ %>
                 <li class="c-notify__itemlabel is-active" data-id="<%= item.id %>">
-                    <%= item.name %>
+                  <%= item.name %>
                 </li>
                 <% } else { %>
                   <li class="c-notify__itemlabel" data-id="<%= item.id %>">
-                      <%= item.name %>
+                    <%= item.name %>
                   </li>
                   <% } %>
-
                     <% }) %>
                       <% } %>
+        </ul>
+        <ul class="c-notify__listlabel sp-only">
+          <li class="c-notify__group">
+            <ul class="c-notify__listinner">
+              <li class="c-notify__itemlabel c-notify__itemall is-active" data-id="1">すべて</li>
+              <li class="c-notify__itemlabel c-notify__itemfirst" data-id="2">お知らせ</li>
+            </ul>
+          </li>
+          <li class="c-notify__group">
+            <ul class="c-notify__listinner">
+              <li class="c-notify__itemlabel" data-id="3">訪問診療</li>
+              <li class="c-notify__itemlabel" data-id="4">採用</li>
+              <li class="c-notify__itemlabel" data-id="5">その他</li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="c-notify__right">
@@ -33,7 +47,7 @@
                     <%= item.name %>
                   </div>
                   <p class="c-notify__desc">
-                    <%= item.desc %>
+                    <%= item.desc%>
                   </p>
                   <% if (item.tag.length> 0) { %>
                     <span class="c-notify__tag">

@@ -15,9 +15,16 @@ video
     @include tab {
         left: -27px;
     }
+    @include sp {
+        top: 68.5%;
+        left: -21px;
+    }
 
     li {
         margin: 10.5px 0;
+        @include sp {
+            margin: 7.5px 0;
+        }
     }
 
     button {
@@ -28,7 +35,11 @@ video
         border-radius: 50%;
         background-color: #afafaf;
         text-indent: -9999px;
-        border: none;        
+        border: none;
+        @include sp {
+            width: 5px;
+            height: 5px;
+        }
     }
 
     li.slick-active button {

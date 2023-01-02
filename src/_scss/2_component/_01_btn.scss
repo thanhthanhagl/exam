@@ -30,6 +30,10 @@ btn
             right: calc(33px - 5%);
         }
     }
+    @include sp {
+        max-width: 335px;
+        padding: 13px 0 12px;
+    }
 
     &::after {
         content: "";
@@ -42,6 +46,10 @@ btn
         position: absolute;
         right: 33px;
         top: 40%;
+        @include sp {
+            right: 52.5px;
+            top: 41%;
+        }
     }
 }
 
@@ -69,6 +77,13 @@ btn
     padding-top: 21px;
     padding-left: 10px;
     z-index: 3;
+    @include sp {
+        width: 44px;
+        height: 44px;
+        text-indent: -9999px;
+        right: 25px;
+        bottom: 100px !important;
+    }
 
     &::after {
         content: "";
@@ -83,6 +98,12 @@ btn
         width: 10px;
         height: 12px;
         transform: rotate(-90deg);
+        @include sp {
+            width: 10px;
+            height: 11px;
+            top: -55%;
+            left: -16%;
+        }
     }
 
     &.is-up {

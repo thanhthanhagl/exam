@@ -4,7 +4,10 @@
             <h2 class="c-title">クリニック概要</h2>
         <div class="c-contact__main">
             <div class="c-contact__wrapimg">
-                <img src="./assets/img/contact.jpg" alt="クリニック概要" class="c-contact__img">
+                <picture>
+                    <source media="(max-width:767px)" srcset="./assets/img/contactsp.jpg">
+                    <img src="./assets/img/contact.jpg" alt="クリニック概要" class="c-contact__img">
+                </picture>
             </div>
             <div class="c-contact__info">
                 <table class="c-contact__table">
@@ -36,13 +39,15 @@
                 </table>
                 <ul class="c-contact__contact">
                     <li class="c-contact__item">
-                        <span class="c-contact__titleitem">TEL </span><span class="c-contact__txtitem">092-407-5555</span>
+                        <span class="c-contact__titleitem">TEL </span><span class="c-contact__txtitem u-pc">092-407-5555</span>
+                        <a href="tel:0924075555" class="u-contenttab"><span class="c-contact__txtitem">092-407-5555</span></a>
                     </li>
                     <li class="c-contact__item">
                         <span class="c-contact__titleitem">FAX </span><span class="c-contact__txtitem">092-834-6900</span>
                     </li>
                     <li class="c-contact__item c-contact__address">
-                        <span class="c-contact__titleitem">住所</span><span class="c-contact__txtitem">〒814-0133 福岡県福岡市城南区七隈1-18-21</span>
+                        <span class="c-contact__titleitem">住所</span>
+                        <span class="c-contact__txtitem">〒814-0133 <br class="sp-only">福岡県福岡市城南区七隈1-18-21</span>
                     </li>
                 </ul>
                 <a href="#" class="c-contact__btn c-btn">交通アクセス</a>

@@ -3,12 +3,9 @@
 body {
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
     font-size: 1.6rem;
-    min-width: 320px;
+    min-width: 375px;
     line-height: 1.5;
     background: #fff;
-    @include sp {
-        min-width: 320px;
-    }
 
     &.is-fixed {
         overflow: hidden;
@@ -35,6 +32,9 @@ body {
     &--w960 {
         max-width: 1000px;
         padding: 0 20px;
+        @include sp {
+            padding: 0;
+        }
     }
 }
 //-------------------------------------------------------

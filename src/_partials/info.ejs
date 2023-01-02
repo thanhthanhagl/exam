@@ -6,7 +6,12 @@
             <% if(typeof info !='undefined' ){ info.forEach(item=>{ %>
                 <div class="c-info__wrapitem">
                     <div class="c-info__item">
-                        <div class="c-info__icon"><img src="<%= item.img %>" alt="<%= item.title %>" class="c-info__img"></div>
+                        <div class="c-info__icon">
+                            <picture>
+                                <source media="(max-width:1023px)" srcset="<%= item.imgsp %>">
+                                <img src="<%= item.img %>" alt="<%= item.title %>" class="c-info__img">
+                            </picture>
+                        </div>
                         <h3 class="c-info__name">
                             <%= item.title %>
                         </h3>

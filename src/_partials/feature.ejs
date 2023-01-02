@@ -3,21 +3,39 @@
         <div class="c-feature__main">
             <h2 class="c-title c-feature__title">当院の特長</h2>
             <div class="c-feature__list">
-                <% if (typeof feature != 'undefined'){%>
+                <% if (typeof feature !='undefined' ){%>
                     <% feature.forEach((item,i)=> { %>
                         <div class="c-feature__item">
                             <div class="c-feature__wrapimg">
-                                 <img class="c-feature__img" src="<%= item.img %>" alt="<% item.title %>">
+                                <picture>
+                                    <source media="(max-width: 767px)" srcset="<%= item.imgsp %>">
+                                    <img class="c-feature__img" src="<%= item.img %>" alt="<% item.title %>">
+                                </picture>
                             </div>
                             <div class="c-feature__info">
-                                <h3 class="c-feature__titleitem"><span class="c-feature__number">
-                                    <% if(i<10){ %><%= "0" + (i + 1) %><% } 
-                                    else { %><%= (i + 1) %><% } %></span><%= item.title %></h3>
+                                <h3 class="c-feature__titleitem pc-only"><span class="c-feature__number">
+                                        <% if(i<10){ %>
+                                            <%= "0" + (i + 1) %>
+                                                <% } else { %>
+                                                    <%= (i + 1) %>
+                                                        <% } %>
+                                    </span>
+                                    <%= item.title %>
+                                </h3>
+                                <h3 class="c-feature__titleitem sp-only"><span class="c-feature__number">
+                                    <% if(i<10){ %>
+                                        <%= "0" + (i + 1) %>
+                                            <% } else { %>
+                                                <%= (i + 1) %>
+                                                    <% } %>
+                                </span>
+                                <%= item.titlesp %>
+                            </h3>
                                 <p class="c-feature__desc"><%- item.desc %></p>
                             </div>
                         </div>
-                <% }) %>
-                <% } %>
+                        <% }) %>
+                            <% } %>
             </div>
         </div>
     </div>

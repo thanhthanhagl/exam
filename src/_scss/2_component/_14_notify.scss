@@ -1,5 +1,8 @@
 .c-notify {
     padding: 87px 0 120px;
+    @include sp {
+        padding: 65px 0 60px;
+    }
 
     .c-notify__main {
         width: 100%;
@@ -8,6 +11,7 @@
         margin-top: 52px;
         @include sp {
             flex-direction: column;
+            margin-top: 35px;
         }
     }
 
@@ -21,8 +25,23 @@
     .c-notify__listlabel {
         @include sp {
             display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .c-notify__group {
+        max-width: 335px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .c-notify__listinner {
+        display: flex;
+        justify-content: space-between;
+        
+        &:first-child {
             justify-content: center;
-            flex-wrap: wrap;
+            gap: 0 5.5px;
         }
     }
 
@@ -43,7 +62,10 @@
         letter-spacing: 1.3px;
         line-height: 1.8;
         @include sp {
+            font-size: 1.4rem;
+            letter-spacing: 0;
             width: 108px;
+            padding: 7px 0;
         }
 
         &.is-active {
@@ -63,6 +85,13 @@
                 @include tab {
                     left: 95%;
                 }
+                @include sp {
+                    background-image: url("./assets/img/arrowsp.png");
+                    left: -2%;
+                    top: 96%;
+                    width: 100%;
+                    background-size: 100%;
+                }
             }
         }
 
@@ -75,6 +104,8 @@
         width: 70.8%;
         @include sp {
             width: 100%;
+            margin-top: 6px;
+            padding: 0 20px;
         }
     }
 
@@ -88,6 +119,9 @@
 
         &:last-child {
             border-bottom: 1px solid #afafaf;
+        }
+        @include sp {
+            padding: 13px 0 13px 21px;
         }
     }
 
@@ -117,6 +151,7 @@
         margin-right: 15px;
         @include tab {
             width: 20%;
+            letter-spacing: 0;
         }
     }
 
@@ -130,6 +165,11 @@
         @include tab {
             width: 15%;
         }
+        @include sp {
+            width: 20%;
+            letter-spacing: 0;
+            margin-left: 16px;
+        }
     }
 
     .c-notify__desc {
@@ -141,6 +181,7 @@
         @include tab {
             width: 100%;
             order: 2;
+            margin-top: 2px;
         }
     }
 
@@ -151,9 +192,24 @@
         text-align: center;
         color: $yellow;
         margin-top: -3px;
+        @include sp {
+            font-size: 1.4rem;
+            letter-spacing: 0;
+            margin-top: 0;
+        }
     }
 
     .c-notify__btn {
         margin: 30px auto;
+        @include sp {
+            margin: 42px auto;
+            max-width: 333px;
+        }
+    }
+
+    .c-notify__btntxt {
+        @include sp {
+            margin-left: -3px;
+        }
     }
 }
