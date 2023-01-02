@@ -74,7 +74,6 @@
     .c-service__btn {
         @include sp {            
             margin: 0 auto 20px;
-            margin-left: -1px;
             font-feature-settings: "palt" 1;
         }
     }
