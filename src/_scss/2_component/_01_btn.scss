@@ -76,13 +76,13 @@ btn
     transition: all 0.3s;
     padding-top: 21px;
     padding-left: 10px;
-    z-index: 3;
+    z-index: 10;
     @include sp {
         width: 44px;
         height: 44px;
         text-indent: -9999px;
         right: 25px;
-        bottom: 100px !important;
+        bottom: 100px;
     }
 
     &::after {

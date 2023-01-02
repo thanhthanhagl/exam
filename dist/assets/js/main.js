@@ -151,8 +151,8 @@ $(document).ready(function () {
     });
     //data bachground fixed
     if ($(window).width() < 768) {
-        $('.parallax').attr("data-parallax-image", "./assets/img/bgfixedsp.jpg");
-        $('.parallax').css("background-image", "url('./assets/img/bgfixedsp.jpg')");
+        $('.parallax').attr("data-parallax-image", "../img/bgfixedsp.jpg");
+        $('.parallax').css("background-image", "url('..s/img/bgfixedsp.jpg')");
         //trim text notify 
         $(".c-notify__desc").each(function () {
             var text = $(this).html();

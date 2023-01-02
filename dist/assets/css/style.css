@@ -1409,7 +1409,7 @@ btn
   transition: all 0.3s;
   padding-top: 21px;
   padding-left: 10px;
-  z-index: 3;
+  z-index: 10;
 }
 @media only screen and (max-width: 767px) {
   .c-backtotop {
