@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <!-- font awesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home page </title>
+    <meta name="description" content="Home page">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+
+  <body>
+    <header class="c-header">
+      <div class="c-header__main">
+        <div class="c-header__left">
+          <a class="c-header__logo" href="/index.html">
+            <picture>
+              <source media="(max-width:1023px)" srcset="./assets/img/logosp.png">
+              <img class="c-header__logoimg" src="./assets/img/logo.png" alt="Matsuguchi">
+            </picture>
+          </a>
+          <p class="c-header__slogan">松口内科・循環器内科クリニック</p>
+        </div>
+        <nav class="c-header__nav">
+          <ul class="c-header__menu">
+            <li class="c-header__item c-header__home">
+              <a class="c-header__link is-active" href="/">
+                <img class="c-header__icon" src="./assets/img/home.svg" alt="トップ">トップ</a>
+            </li>
+            <li class="c-header__item c-header__hospital">
+              <a class="c-header__link " href="#">
+                <img class="c-header__icon" src="./assets/img/hospital.svg" alt="当院について ">当院について </a>
+            </li>
+            <li class="c-header__item c-header__medical">
+              <a class="c-header__link " href="#">
+                <img class="c-header__icon" src="./assets/img/medical.svg" alt="診療について">診療について</a>
+            </li>
+            <li class="c-header__item c-header__taxi">
+              <a class="c-header__link " href="#">
+                <img class="c-header__icon" src="./assets/img/taxi.svg" alt="交通アクセス">交通アクセス</a>
+            </li>
+            <li class="c-header__item c-header__message">
+              <a class="c-header__link " href="#">
+                <img class="c-header__icon" src="./assets/img/message.svg" alt="お知らせ">お知らせ</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="c-header__right">
+          <a href="#" class="c-header__btn"><span class="c-header__txt">WEB 予約</span></a>
+          <p class="c-header__tel">092-407-5555</p>
+        </div>
+        <div class="c-header__iconmenu u-notpc">
+          <i class="c-header__line"></i>
+          <i class="c-header__line"></i>
+          <i class="c-header__line"></i>
+        </div>
+      </div>
+      <nav class="c-header__gnavmb u-notpc">
+        <ul class="c-header__overlay">
+          <li class="c-header__itemmb">
+            <a class="c-header__linkmb is-active" href="/">TOP</a>
+          </li>
+          <li class="c-header__itemmb">
+            <a class="c-header__linkmb " href="#">お知らせ</a>
+          </li>
+          <li class="c-header__itemmb">
+            <a class="c-header__linkmb " href="#">当院について</a>
+            <ul class="c-header__subgnavmb">
+              <li class="c-header__subnavmb">
+                <a href="#" class="c-header__sublinkmb">医師・スタッフ紹介</a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-header__itemmb">
+            <a class="c-header__linkmb " href="#">診療について</a>
+            <ul class="c-header__subgnavmb">
+              <li class="c-header__subnavmb">
+                <a href="#" class="c-header__sublinkmb">一般内科・循環器内科</a>
+              </li>
+              <li class="c-header__subnavmb">
+                <a href="#" class="c-header__sublinkmb">禁煙外来</a>
+              </li>
+              <li class="c-header__subnavmb">
+                <a href="#" class="c-header__sublinkmb">睡眠時無呼吸症候群</a>
+              </li>
+              <li class="c-header__subnavmb">
+                <a href="#" class="c-header__sublinkmb">訪問診療</a>
+              </li>
+            </ul>
+          </li>
+          <li class="c-header__itemmb">
+            <a class="c-header__linkmb " href="#">交通アクセス</a>
+          </li>
+        </ul>
+        <div class="c-header__social">
+          <ul class="c-header__socialmedia">
+            <li class="c-header__itemsocial c-header__instagram">
+              <a href="https://www.instagram.com/" target="_blank">Instagram<i class="c-header__iconmn c-header__iconins"></i></a>
+            </li>
+            <li class="c-header__itemsocial c-header__facebook">
+              <a href="https://www.facebook.com/" target="_blank">facebook<i class="c-header__iconmn c-header__iconfb"></i></a>
+            </li>
+            <li class="c-header__itemsocial c-header__linemedia">
+              <a href="https://line.me/" target="_blank">LINE<i class="c-header__iconmn c-header__iconline"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-header__btninner">
+          <a href="#" class="c-header__btn c-header__btnmb"><span class="c-header__txt">WEB 予約</span></a>
+        </div>
+        <table class="c-header__table">
+          <tbody>
+            <tr class="c-header__tr">
+              <th class="c-header__th">受付時間</th>
+              <th class="c-header__th">月</th>
+              <th class="c-header__th">火</th>
+              <th class="c-header__th">水</th>
+              <th class="c-header__th">木</th>
+              <th class="c-header__th">金</th>
+              <th class="c-header__th">土</th>
+              <th class="c-header__th">日・祝</th>
+            </tr>
+            <tr class="c-header__tr">
+              <th class="c-header__th"> 9：00 - 13：00 </th>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-off"></i>
+              </td>
+            </tr>
+            <tr class="c-header__tr">
+              <th class="c-header__th"> 14：00 - 18：00 </th>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-off"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-open"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-off"></i>
+              </td>
+              <td class="c-header__td">
+                <i class="c-header__status is-off"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="c-header__copyright">Copyright© 2023 Matsuguchi-clinic All Rights Reserved</div>
+      </nav>
+    </header>
+    <main class="p-top">
+      <!-- start section mainvisual  -->
+      <section class="c-mainvisual">
+        <div class="c-mainvisual__scroll"><a href="#notify" class="c-mainvisual__btntxt">scroll</a></div>
+        <div class="c-mainvisual__main">
+          <div class="c-mainvisual__inner">
+            <h2 class="c-mainvisual__title">
+              <span class="c-mainvisual__txt">私たちは、<br></span>
+              <span class="c-mainvisual__txt">患者様に寄り添う医療を提供し、<br></span>
+              <span class="c-mainvisual__txt">地域に貢献します。</span>
+            </h2>
+            <a href="#" class="c-mainvisual__news">
+              <span class="c-mainvisual__type">最新のお知らせ</span>
+              <span class="c-mainvisual__date">2023.00.00</span>
+              <span class="c-mainvisual__post">テキストテキ<span class="u-pc">ストテキテキスト</span>…</span>
+            </a>
+          </div>
+          <div class="c-mainvisual__slider">
+            <div class="c-mainvisual__slide c-mainvisual__slidemain"></div>
+            <div class="c-mainvisual__slide c-mainvisual__slidemiddle"></div>
+            <div class="c-mainvisual__slide c-mainvisual__slideend"></div>
+          </div>
+        </div>
+      </section>
+      <!-- end section mainvisual  -->
+      <!-- start section notification  -->
+      <section class="c-notify" id="notify">
+        <div class="l-container l-container--w960">
+          <h2 class="c-title c-notify__title">お知らせ</h2>
+          <div class="c-notify__main">
+            <div class="c-notify__left">
+              <ul class="c-notify__listlabel pc-only">
+                <li class="c-notify__itemlabel is-active" data-id="1"> すべて </li>
+                <li class="c-notify__itemlabel" data-id="2"> お知らせ </li>
+                <li class="c-notify__itemlabel" data-id="3"> 訪問診療 </li>
+                <li class="c-notify__itemlabel" data-id="4"> 採用 </li>
+                <li class="c-notify__itemlabel" data-id="5"> その他 </li>
+              </ul>
+              <ul class="c-notify__listlabel sp-only">
+                <li class="c-notify__group">
+                  <ul class="c-notify__listinner">
+                    <li class="c-notify__itemlabel c-notify__itemall is-active" data-id="1">すべて</li>
+                    <li class="c-notify__itemlabel c-notify__itemfirst" data-id="2">お知らせ</li>
+                  </ul>
+                </li>
+                <li class="c-notify__group">
+                  <ul class="c-notify__listinner">
+                    <li class="c-notify__itemlabel" data-id="3">訪問診療</li>
+                    <li class="c-notify__itemlabel" data-id="4">採用</li>
+                    <li class="c-notify__itemlabel" data-id="5">その他</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="c-notify__right">
+              <div class="c-notify__list is-active" id="1">
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> お知らせ </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                    <span class="c-notify__tag"> NEW </span>
+                  </div>
+                </a>
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> 訪問診療 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> 採用 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> その他 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+              </div>
+              <div class="c-notify__list" id="2">
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> お知らせ </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                    <span class="c-notify__tag"> NEW </span>
+                  </div>
+                </a>
+              </div>
+              <div class="c-notify__list" id="3">
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> 訪問診療 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+              </div>
+              <div class="c-notify__list" id="4">
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> 採用 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+              </div>
+              <div class="c-notify__list" id="5">
+                <a class="c-notify__item" href="#">
+                  <div class="c-notify__content">
+                    <div class="c-notify__date"> 2023.00.00 </div>
+                    <div class="c-notify__name"> その他 </div>
+                    <p class="c-notify__desc"> テキストテキストテキストテキストテキスト </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="c-btn c-notify__btn">
+            <span class="c-notify__btntxt">お知らせ一覧</span>
+          </a>
+        </div>
+      </section><!-- end section notification  -->
+      <!-- start section service  -->
+      <section class="c-service">
+        <div class="l-container l-container--w1200">
+          <div class="c-service__main">
+            <h2 class="c-title c-service__title">地域の皆様から信頼される<br class="sp-only"><span class="c-service__titlesp ">医療を提供します。</span></h2>
+            <div class="c-service__wrapimg">
+              <picture>
+                <source media="(max-width:767px )" srcset="./assets/img/servicesp.jpg">
+                <img class="c-service__img" src="./assets/img/service.jpg" alt="地域の皆様から信頼される医療を提供します。">
+              </picture>
+            </div>
+            <div class="l-container l-container--w960">
+              <p class="c-service__desc">地域のかかりつけ医として患者様に寄り添う医療を提供します。<br> 循環器疾患をお持ちの患者さんの定期的な診療や循環器疾患の精査や専門医への受診を考えられている方いつでもご相談されてください。一般内科についてもプライマリケアの立場から適切な診療を心掛けており必要であれば各基幹病院の専門医へのご紹介を行っています。在宅訪問診療 ( 外来通院が困難な方、末期がん、心不全などの在宅看取り )も行っております。 </p>
+              <div class="c-service__btns">
+                <a href="#" class="c-btn c-service__btn">当院について</a>
+                <a href="#" class="c-btn c-service__btn">医師・スタッフ紹介</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- end section service  -->
+      <!-- start section feature  -->
+      <section class="c-feature">
+        <div class="l-container l-container--w1200">
+          <div class="c-feature__main">
+            <h2 class="c-title c-feature__title">当院の特長</h2>
+            <div class="c-feature__list">
+              <div class="c-feature__item">
+                <div class="c-feature__wrapimg">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/col1sp.jpg">
+                    <img class="c-feature__img" src="./assets/img/col1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="c-feature__info">
+                  <h3 class="c-feature__titleitem pc-only"><span class="c-feature__number"> 01 </span> 総合診療 </h3>
+                  <h3 class="c-feature__titleitem sp-only"><span class="c-feature__number"> 01 </span> 循環器内科専門医 </h3>
+                  <p class="c-feature__desc">専門の循環器だけでなくプライマリ・ケアの視点から患者様が抱えておられる心身の不調に寄り添った医療を提供します。</p>
+                </div>
+              </div>
+              <div class="c-feature__item">
+                <div class="c-feature__wrapimg">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/col2sp.jpg">
+                    <img class="c-feature__img" src="./assets/img/col2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="c-feature__info">
+                  <h3 class="c-feature__titleitem pc-only"><span class="c-feature__number"> 02 </span> 訪問診療 </h3>
+                  <h3 class="c-feature__titleitem sp-only"><span class="c-feature__number"> 02 </span> 訪問診療 </h3>
+                  <p class="c-feature__desc">定期訪問以外に緊急時には、24 時間体制の訪問診療が可能。在宅看取りも行っています。</p>
+                </div>
+              </div>
+              <div class="c-feature__item">
+                <div class="c-feature__wrapimg">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./assets/img/col3sp.jpg">
+                    <img class="c-feature__img" src="./assets/img/col3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="c-feature__info">
+                  <h3 class="c-feature__titleitem pc-only"><span class="c-feature__number"> 03 </span> 臨床検査の充実 </h3>
+                  <h3 class="c-feature__titleitem sp-only"><span class="c-feature__number"> 03 </span> 臨床検査の充実 </h3>
+                  <p class="c-feature__desc">臨床検査技師の 2 名体制で検査を行い<br>スピーディかつ信頼できる診察が可能です。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- end section feature  -->
+      <!-- start section home  -->
+      <section class="c-home">
+        <div class="l-container l-container--w1200">
+          <div class="c-home__contain">
+            <h2 class="c-title c-home__title">訪問診療</h2>
+            <div class="c-home__main">
+              <div class="c_home__left">
+                <picture>
+                  <source media="(max-width:1023px)" srcset="./assets/img/mapsp.png">
+                  <img class="c-home__img" src="./assets/img/map.png" alt="訪問診療">
+                </picture>
+              </div>
+              <div class="c-home__right">
+                <div class="c-home__top">
+                  <h3 class="c-home__heading">患者様に寄り添う訪問診療</h3>
+                  <p class="c-home__text">病院への受診が困難な方に訪問診療いたします。<br> 訪問診療とは通院が困難な患者様のお宅に医師が定期的に診療に伺い、自宅での療養生活をサポートするものです。<br> 病院の主治医、訪問看護師やケアマネージャーなど多くの方々と連携して自宅という自由で安らげる環境でのより良い医療を提供いたします。<br>
+                    <span class="c-home__edit">「訪問診療」をご希望の方は<span class="c-home__scroll">お電話、もしくは直接来院されてください。</span></span><br> ご家族だけでも構いません。ご自宅が可能な範囲かお気軽にお問い合せください。
+                  </p>
+                  <div class="c-home__box"><span class="c-home__boxleft">訪問診療の範囲</span><span class="c-home__boxright">西区、早良区、城南区、中央区、南区 </span></div>
+                </div>
+                <div class="c-home__bottom">
+                  <h3 class="c-home__heading">このようなお困りごとは<br class="sp-only">ありませんか？</h3>
+                  <div class="c-home__list">
+                    <ul>
+                      <li class="c-home__item"><span class="c-home__itemtxt">様々な障害を持ち、通院が困難</span></li>
+                      <li class="c-home__item"><span class="c-home__itemtxt">医療処置が必要だが、寝たきりで通院が困難</span></li>
+                      <li class="c-home__item"><span class="c-home__itemtxt">末期がんで訪問診療を希望している</span></li>
+                      <li class="c-home__item"><span class="c-home__itemtxt">終末期医療を希望している</span></li>
+                      <li class="c-home__item"><span class="c-home__itemtxt">重症心不全を患っている</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="#" class="c-btn c-home__btn">訪問診療について</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-home__slides">
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide1.jpg" alt="room">
+          </div>
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide2.jpg" alt="staff">
+          </div>
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide3.jpg" alt="building">
+          </div>
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide4.jpg" alt="nurse">
+          </div>
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide5.jpg" alt="counter">
+          </div>
+          <div class="c-home__wrapimg">
+            <img class="c-home__slide" src="./assets/img/slide6.jpg" alt="co-operate">
+          </div>
+        </div>
+      </section><!-- end section home  -->
+      <!-- start section info  -->
+      <section class="c-info">
+        <div class="l-container l-container--w1200">
+          <div class="c-info__contain">
+            <h2 class="c-title">外来診療について</h2>
+            <div class="c-info__list">
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon1sp.svg">
+                      <img src="./assets/img/icon1.svg" alt="総合診療" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 総合診療 </h3>
+                  <p class="c-info__desc">患者様の訴えを十分にお聞きした上で診察し、必要な検査、治療法を考慮し適切な治療薬処方を行います。<br>精密検査が必要であれば各基幹病院の専門医へのご紹介を行います。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon2sp.svg">
+                      <img src="./assets/img/icon2.svg" alt="循環器内科" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 循環器内科 </h3>
+                  <p class="c-info__desc">長年循環器診療に従事した経験を生かして心血管に持病をお持ちの方の定期的な検査、内服薬処方を行います。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon3sp.svg">
+                      <img src="./assets/img/icon3.svg" alt="各種エコー検診" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 各種エコー検診 </h3>
+                  <p class="c-info__desc">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon4sp.svg">
+                      <img src="./assets/img/icon4.svg" alt="睡眠時無呼吸症候群" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 睡眠時無呼吸症候群 </h3>
+                  <p class="c-info__desc">寝ている間に無呼吸になる（息が止まってしまう）病気です。睡眠の質が下がるだけではなく、将来的に心筋梗塞や脳卒中、糖尿病のリスクが上がるという報告もあります。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon5sp.svg">
+                      <img src="./assets/img/icon5.svg" alt="発熱外来" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 発熱外来 </h3>
+                  <p class="c-info__desc">発熱、咳、倦怠感などの症状のある患者様の診療を行っています。<br>感染対策のため、別室で診察しています。<br>来院前にお電話でお問い合わせください。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon6sp.svg">
+                      <img src="./assets/img/icon6.svg" alt="アレルギー疾患" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> アレルギー疾患 </h3>
+                  <p class="c-info__desc">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon7sp.svg">
+                      <img src="./assets/img/icon7.svg" alt="禁煙外来" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 禁煙外来 </h3>
+                  <p class="c-info__desc">禁煙外来では、医師による禁煙のアドバイスに加えて、禁煙補助薬の処方を受けることができます。禁煙をお考えの方は当院にご相談ください。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon8sp.svg">
+                      <img src="./assets/img/icon8.svg" alt="予防接種" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 予防接種 </h3>
+                  <p class="c-info__desc">送付された接種券一式、予診票、本人確認書類（運転免許証・健康保険証・マイナンバーカードなど）を持ってきてください。<br>すぐに肩を出せる服を着て来院ください。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+              <div class="c-info__wrapitem">
+                <div class="c-info__item">
+                  <div class="c-info__icon">
+                    <picture>
+                      <source media="(max-width:1023px)" srcset="./assets/img/icon9sp.svg">
+                      <img src="./assets/img/icon9.svg" alt="健診" class="c-info__img">
+                    </picture>
+                  </div>
+                  <h3 class="c-info__name"> 健診 </h3>
+                  <p class="c-info__desc">特定健診・企業健診、個人健診等を受け入れています。就業前の健診、流行性疾患の抗体検査なども行っています。<br>詳細については当院までお問い合せください。</p>
+                  <a href="#" class="c-btn c-info__btn">詳しくみる</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-info__parallax">
+          <div class="parallax parallax--bg" data-parallax-image="./assets/img/bgfixed.jpg"></div>
+        </div>
+      </section><!-- end section info  -->
+      <!-- start section contact  -->
+      <section class="c-contact">
+        <div class="l-container l-container--w1200">
+          <div class="c-contact__contain">
+            <h2 class="c-title">クリニック概要</h2>
+            <div class="c-contact__main">
+              <div class="c-contact__wrapimg">
+                <picture>
+                  <source media="(max-width:767px)" srcset="./assets/img/contactsp.jpg">
+                  <img src="./assets/img/contact.jpg" alt="クリニック概要" class="c-contact__img">
+                </picture>
+              </div>
+              <div class="c-contact__info">
+                <table class="c-contact__table">
+                  <tbody>
+                    <tr class="c-contact__tr">
+                      <th class="c-contact__th">受付時間</th>
+                      <th class="c-contact__th">月</th>
+                      <th class="c-contact__th">火</th>
+                      <th class="c-contact__th">水</th>
+                      <th class="c-contact__th">木</th>
+                      <th class="c-contact__th">金</th>
+                      <th class="c-contact__th">土</th>
+                      <th class="c-contact__th">日・祝</th>
+                    </tr>
+                    <tr class="c-contact__tr">
+                      <th class="c-contact__th"> 9：00 - 13：00 </th>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-off"></i>
+                      </td>
+                    </tr>
+                    <tr class="c-contact__tr">
+                      <th class="c-contact__th"> 14：00 - 18：00 </th>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-off"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-open"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-off"></i>
+                      </td>
+                      <td class="c-contact__td">
+                        <i class="c-contact__status is-off"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <ul class="c-contact__contact">
+                  <li class="c-contact__item">
+                    <span class="c-contact__titleitem">TEL </span><span class="c-contact__txtitem u-pc">092-407-5555</span>
+                    <a href="tel:0924075555" class="u-contenttab"><span class="c-contact__txtitem">092-407-5555</span></a>
+                  </li>
+                  <li class="c-contact__item">
+                    <span class="c-contact__titleitem">FAX </span><span class="c-contact__txtitem">092-834-6900</span>
+                  </li>
+                  <li class="c-contact__item c-contact__address">
+                    <span class="c-contact__titleitem">住所</span>
+                    <span class="c-contact__txtitem">〒814-0133 <br class="sp-only">福岡県福岡市城南区七隈1-18-21</span>
+                  </li>
+                </ul>
+                <a href="#" class="c-contact__btn c-btn">交通アクセス</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-contact__map">
+          <iframe class="c-contact__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.5593436905965!2d130.3558500155739!3d33.56482365070458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193850f438d1b%3A0x6099c48de5de226a!2s1-ch%C5%8Dme-18-21%20Nanakuma%2C%20Jonan%20Ward%2C%20Fukuoka%2C%20814-0133%2C%20Japan!5e0!3m2!1sen!2s!4v1672222049456!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section><!-- end section contact  -->
+      <!-- start fixed on mobile  -->
+      <div class="c-fixed">
+        <div class="c-fixed__main">
+          <a href="#" class="c-fixed__item">
+            <div class="c-fixed__wrapicon">
+              <img src="./assets/img/iconphone.svg" alt="WEB 予約" class="c-fixed__icon">
+            </div>
+            <span class="c-fixed__txt">WEB 予約</span>
+          </a>
+          <a href="tel:0924075555" class="c-fixed__item">
+            <div class="c-fixed__wrapicon">
+              <img src="./assets/img/icontel.svg" alt="電話をかける" class="c-fixed__icon">
+            </div>
+            <span class="c-fixed__txt">電話をかける</span>
+          </a>
+          <a href="#" class="c-fixed__item">
+            <div class="c-fixed__wrapicon">
+              <img src="./assets/img/icontaxi.svg" alt="交通アクセス" class="c-fixed__icon">
+            </div>
+            <span class="c-fixed__txt">交通アクセス</span>
+          </a>
+        </div>
+      </div><!-- end fixed on mobile -->
+    </main>
+    <div class="c-backtotop">top</div>
+    <footer class="c-footer">
+      <div class="l-container l-container--w960">
+        <div class="c-footer__main">
+          <a href="/" class="c-footer__top"><img src="./assets/img/logoft.png" alt="Matsuguchi" class="c-footer__logo">
+            <p class="c-footer__slogan">松口内科・循環器内科クリニック</p>
+          </a>
+          <div class="c-footer__list">
+            <div class="c-footer__menu">
+              <ul class="c-footer__linkmenu">
+                <li class="c-footer__link"><a class="c-footer__linkmain c-footer__linktop" href="#">TOP</a></li>
+                <li class="c-footer__link"><a class="c-footer__linkmain" href="#">お知らせ</a>
+                </li>
+                <li class="c-footer__link"><a class="c-footer__linkmain" href="#">当院について</a>
+                  <ul class="c-footer__childmenu">
+                    <li class="c-footer__linkchild">
+                      <a href="#">医師・スタッフ紹介</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="c-footer__link"><a class="c-footer__linkmain" href="#">診療について</a>
+                  <ul class="c-footer__childmenu">
+                    <li class="c-footer__linkchild"><a href="#">一般内科・循環器内科</a></li>
+                    <li class="c-footer__linkchild"><a href="#">禁煙外来</a></li>
+                    <li class="c-footer__linkchild"><a href="#">睡眠時無呼吸症候群</a></li>
+                    <li class="c-footer__linkchild"><a href="#">訪問診療</a></li>
+                  </ul>
+                </li>
+                <li class="c-footer__link"><a class="c-footer__linkmain" href="#">交通アクセス</a></li>
+              </ul>
+            </div>
+            <div class="c-footer__social">
+              <ul class="c-footer__socialmedia">
+                <li class="c-footer__itemsocial c-footer__instagram"><a href="https://www.instagram.com/" target="_blank">Instagram<i class="c-footer__icon c-footer__iconins"></i></a></li>
+                <li class="c-footer__itemsocial c-footer__facebook"><a href="https://www.facebook.com/" target="_blank">facebook<i class="c-footer__icon c-footer__iconfb"></i></a></li>
+                <li class="c-footer__itemsocial c-footer__line"><a href="https://line.me/" target="_blank">LINE<i class="c-footer__icon c-footer__iconline"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="c-footer__copyright">Copyright© 2023 Matsuguchi-clinic All Rights Reserved</div>
+        </div>
+      </div>
+    </footer>
+    <!-- Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/universal-parallax.min.js"></script>
+    <script>
+      new universalParallax().init({
+        speed: 8.0
+      });
+    </script>
+  </body>
+
+</html>
