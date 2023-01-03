@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 100px;
-    padding: 11.7% 0 12%;
+    padding: 11.6% 0 12%;
     @include sp {
         background-image: url("./assets/img/bg-section5sp.jpg");
         background-size: 100% 100%;
@@ -100,7 +100,7 @@
         color: $black;
         font-weight: 500;
         line-height: 1.75;
-        margin-top: 23px;
+        margin-top: 24px;
         @include sp {
             text-align: center;
             display: flex;
@@ -127,6 +127,7 @@
         letter-spacing: 0;
         @include sp {
             margin-left: 4px;
+            margin-top: 2px;
         }
     }
 
@@ -140,7 +141,7 @@
             }
         }
         @include sp {
-            margin-top: 67px;
+            margin-top: 65px;
         }
     }
 
@@ -151,7 +152,7 @@
         padding: 21px 42px 25px;
         @include sp {
             padding: 24px 19px 25px;
-            margin-top: 30px;
+            margin-top: 32px;
         }
     }
 
@@ -204,6 +205,10 @@
         @include tab {
             margin: 41px auto 0;
         }
+        @include sp {
+            max-width: 333px;
+            padding: 13px 0 12px;
+        }
     }
 
     .c-home__slides {
@@ -241,9 +246,6 @@
 
         &.is-active {
             background-position: 0 100%;
-            @include sp {
-                background-position: 0 95%;
-            }
         }
     }
 }

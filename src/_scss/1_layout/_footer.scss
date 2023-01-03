@@ -7,7 +7,7 @@ footer
     color: #fff;
     text-align: center;
     @include sp {
-        padding: 49px 20px 14px;
+        padding: 48px 20px 14px;
     }
 
     .c-footer__logo {
@@ -101,7 +101,7 @@ footer
                     height: 12px;
                     position: absolute;
                     right: 56px;
-                    top: 24px;
+                    top: 23px;
                 }
 
                 &::after {
@@ -111,8 +111,8 @@ footer
                     background-color: $white;
                     height: 1px;
                     position: absolute;
-                    right: 50px;
-                    top: 30px;
+                    right: 50.5px;
+                    top: 28px;
                 }
             }           
 

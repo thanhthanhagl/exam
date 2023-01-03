@@ -1,18 +1,4 @@
-$(document).ready(function () {
-    //-----------------open menu mobile -------
-    $(".c-header__iconmenu").click(function () {
-        if ($(window).scrollTop() < 30) {
-            $(".c-header").toggleClass("is-scroll");
-        }
-        $(".c-header__navmb").toggleClass("is-open");
-        $(".c-header__icon").toggleClass("is-open");
-        $('body').toggleClass("is-fixed");
-    });
-    $(".c-header__itemmb").click(function () {
-        $(".c-header__navmb").toggleClass("is-open");
-        $(".c-header__icon").toggleClass("is-open");
-        $('body').toggleClass("is-fixed");
-    });
+$(document).ready(function () {    
     //----------slick slider------------
     $('.c-mainvisual__slider').slick({
         infinite: true,
@@ -115,6 +101,9 @@ $(document).ready(function () {
             if ($('.c-backtotop').hasClass('is-up')) {
                 $('.c-backtotop').css('bottom', '10px');
             }
+            if($(window).width() < 768){
+                $('.c-backtotop').css('bottom', '90px');
+            }
         }
     }
 
@@ -176,17 +165,17 @@ $(document).ready(function () {
         parent.parent().addClass("is-parent");
     }
     $(".c-header__linkmb:first-child").click(function () {
-        $('body').toggleClass("is-fixed");
         $('body,html').animate({
             scrollTop: 0
-        }, 500);
+        }, 500);            
         return false;
     });
     $(".c-header__linkmb").click(function () {
         var item = $(this).next();
         if (item.length > 0) {
             $(this).next().toggleClass("is-click");
-            $(this).parent().toggleClass("is-show");
+            $(this).parent().addClass("is-show");
+            $('body').addClass("is-fixed");
         }
         else {
             $(".c-header__subgnavmb").removeClass("is-click");
@@ -200,8 +189,8 @@ $(document).ready(function () {
         $(".c-header__subgnavmb").removeClass("is-click");
         $(".c-header__gnavmb").toggleClass("is-open");
         $(".c-header__iconmenu").toggleClass("is-open");
-        $('body').toggleClass("is-fixed");
         $(".c-header__left").toggleClass("is-open");
+        $('body').toggleClass("is-fixed");
     });
     //accordian footer
     var parentft = $(".c-footer__link a").next();

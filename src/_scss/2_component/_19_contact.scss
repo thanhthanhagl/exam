@@ -85,7 +85,6 @@
                 padding-right: 9px;
                 @include sp {
                     width: 31%;
-                    letter-spacing: 0.3px;
                 }
             }
         }
@@ -176,7 +175,7 @@
     .c-contact__contact {
         margin-top: 25px;
         @include sp {
-            margin-top: 10px;
+            margin-top: 11px;
         }
     }
 
@@ -221,7 +220,7 @@
         }
 
         &>.c-contact__txtitem {
-            margin-left: 15px;
+            margin-left: 12px;
             @include sp {
                 display: inline-block;
                 margin-top: 2px;
@@ -232,14 +231,19 @@
     }
 
     .c-contact__btn {
-        margin-top: 29px;
+        margin-top: 28px;
         max-width: 298px;
         @include tab {
             margin: 29px auto 0;
         }
         @include sp {
-            margin: 16px auto 0;
+            margin: 15px auto 0;
             max-width: 333px;
+
+            &::after {
+                top: 38%;
+                right: 52px;
+            }
         }
     }
 
