@@ -2,7 +2,7 @@
     .c-contact__contain {
         margin-top: 11.1%;
         @include sp {
-            margin-top: 14%;
+            margin-top: 14.4%;
         }
     }
 
@@ -40,7 +40,7 @@
             padding-left: 0;
         }
         @include sp {            
-            padding-top: 25px;
+            padding-top: 23px;
         }
     }
 
@@ -72,7 +72,7 @@
                     }
                 }
                 @include sp {
-                    padding: 11px 0 7px;
+                    padding: 11px 0 8px;
                 }
             }
         }
@@ -204,6 +204,13 @@
         color: $black;
         margin-left: 12px;
         font-feature-settings: "palt" 1;
+        @include sp {
+            &:first-child {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                text-decoration-color: $green;
+            }
+        }
     }
 
     .c-contact__address {
@@ -252,7 +259,7 @@
         height: 500px;
         @include sp {
             height: 400px;
-            margin-top: 82px;
+            margin-top: 80px;
         }
     }
 

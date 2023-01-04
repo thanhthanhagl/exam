@@ -73,6 +73,7 @@
 
             &:hover {
                 opacity: 1;
+                cursor: default;
             }
 
             &::after {
@@ -125,7 +126,7 @@
             border-bottom: 1px solid #afafaf;
         }
         @include sp {
-            padding: 13px 0 13px 21px;
+            padding: 13px 0 14px 21px;
         }
     }
 
@@ -207,7 +208,7 @@
     .c-notify__btn {
         margin: 30px auto;
         @include sp {
-            margin: 42px auto;
+            margin: 40px auto;
             max-width: 333px;
         }
     }

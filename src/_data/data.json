@@ -35,7 +35,8 @@
     "menufooter": [
       {
         "title": "TOP",
-        "url": "/"
+        "url": "/",
+        "classaddon":"c-top"
       },
       {
         "title": "お知らせ",

@@ -36,7 +36,7 @@
     <% if (typeof linklists != 'undefined') { %>
       <% linklists.menufooter && linklists.menufooter.forEach(link => { %>
         <li class="c-header__itemmb">
-          <a class="c-header__linkmb <% if (link.current || link.active) { %>is-active<% } %>" href="<%= link.url %>"><%= link.title %></a>
+          <a class="c-header__linkmb <% if(link.classaddon){ %><%= link.classaddon %><% } %> <% if (link.current || link.active) { %>is-active<% } %>" href="<%= link.url %>"><%= link.title %></a>
           <% if(link.sub){ %>          
               <ul class="c-header__subgnavmb">
                 <% link.sub.forEach(item => { %>

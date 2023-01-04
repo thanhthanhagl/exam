@@ -2,7 +2,7 @@
     .c-info__contain {
         margin: 12.1% auto 10.3%;
         @include sp {
-            margin: 27.5% auto 23.7%;
+            margin: 27.6% auto 23.7%;
         }
     }
 
@@ -47,6 +47,11 @@
         }
     }
 
+    .c-info__img {
+        @include tab {
+            height: 100%;
+        }
+    }
 
     .c-info__name {
         font-family: $sub-font;
@@ -55,8 +60,10 @@
         letter-spacing: 1.9px;
         line-height: 1.75;
         color: $black;
-        @include tab {
+        @include laptop {
             font-size: 2rem;
+        }
+        @include tab {
             letter-spacing: 1.5px;
             margin-top: 12px;
         }

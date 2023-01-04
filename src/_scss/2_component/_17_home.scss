@@ -3,11 +3,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin-top: 100px;
-    padding: 11.6% 0 12%;
+    padding: 11.7% 0 12%;
     @include sp {
         background-image: url("./assets/img/bg-section5sp.jpg");
         margin-top: 50px;
-        padding: 27.5% 0 37%;
+        padding: 104px 0 139px;
     }
 
     .c-home__main {
@@ -16,7 +16,7 @@
             flex-direction: column;
         }
         @include sp {
-            margin-top: 53px;
+            margin-top: 54px;
         }
     }
 
@@ -106,7 +106,8 @@
             flex-direction: column;
             padding: 16px 10px 15px;
             line-height: 1.8;
-            margin-top: 32px;
+            margin-top: 31px;
+            border-radius: 8px;
         }
     }
 
@@ -150,11 +151,15 @@
         border-radius: 9px;
         padding: 21px 42px 25px;
         @include laptop {
-            padding: 21px 29px 25px;
+            padding: 21px 25px 25px;
+        }
+        @include tab {
+            padding: 21px 42px 25px; 
         }
         @include sp {
             padding: 24px 19px 25px;
-            margin-top: 32px;
+            margin-top: 31px;
+            border-radius: 8px;
         }
     }
 

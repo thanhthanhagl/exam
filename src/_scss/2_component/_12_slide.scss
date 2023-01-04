@@ -16,7 +16,7 @@ video
         left: -27px;
     }
     @include sp {
-        top: 76.5%;
+        top: 68%;
         left: -21px;
     }
 
@@ -28,7 +28,6 @@ video
     }
 
     button {
-        cursor: pointer;
         display: block;
         width: 10px;
         height: 10px;
@@ -37,14 +36,15 @@ video
         background-color: #afafaf;
         text-indent: -9999px;
         border: none;
+        cursor: pointer;
+        @include sp {
+            width: 5px;
+            height: 5px;
+        }
 
         &:hover {
             opacity: 0.7;
             background-color: $green;
-        }
-        @include sp {
-            width: 5px;
-            height: 5px;
         }
     }
 

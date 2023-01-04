@@ -30,6 +30,7 @@ btn
             right: calc(33px - 5%);
         }
     }
+
     @include sp {
         max-width: 335px;
         padding: 13px 0 12px;
@@ -46,6 +47,7 @@ btn
         position: absolute;
         right: 33px;
         top: 40%;
+
         @include sp {
             right: 52.5px;
             top: 41%;
@@ -53,62 +55,73 @@ btn
     }
 }
 
-.c-backtotop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.c-backtotop {    
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid $green;
-    font-family: $sub-font;
-    font-weight: 500;
-    font-size: 1.4rem;
-    letter-spacing: 1.1px;
-    line-height: 1.75;
-    text-align: center;
-    color: $green;
-    text-transform: uppercase;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
     cursor: pointer;
-    transition: all 0.3s;
-    padding-top: 21px;
-    padding-left: 10px;
-    z-index: 8;
-    background-color: $white;
 
     &:hover {
         opacity: 0.7;
     }
-    @include sp {
-        width: 44px;
-        height: 44px;
-        text-indent: -9999px;
-        right: 25px;
-        bottom: 100px;
+
+    .c-backtotop__text {
+        line-height: 1.75;
+        letter-spacing: 1.1px;
+        font-family: $sub-font;
+        font-weight: 500;
+        color: $green;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding-top: 16px;
+        padding-left: 10px;
     }
 
-    &::after {
-        content: "";
-        display: block;
-        position: relative;
-        transform: translate(-50%, -50%);
-        top: -46%;
-        left: -42%;
-        background-image: url("./assets/img/arrow.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 10px;
-        height: 12px;
-        transform: rotate(-90deg);
+    .c-backtotop__link {
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border: 1px solid $green;
+
         @include sp {
-            width: 10px;
-            height: 11px;
-            top: -55%;
-            left: -16%;
+            width: 44px;
+            height: 44px;
+            text-indent: -9999px;
         }
+
+        &::after {
+            content: "";
+            display: block;
+            position: relative;
+            transform: translate(-50%, -50%);
+            top: -15%;
+            left: -33%;
+            background-image: url("./assets/img/arrow.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 10px;
+            height: 12px;
+            transform: rotate(-90deg);
+    
+            @include sp {
+                width: 10px;
+                height: 11px;
+                top: -4%;
+                left: -12%;
+            }
+        }
+
+    
     }
 
     &.is-up {
