@@ -1,12 +1,11 @@
 .c-home {
     background-image: url("./assets/img/bg-section5.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     margin-top: 100px;
     padding: 11.6% 0 12%;
     @include sp {
         background-image: url("./assets/img/bg-section5sp.jpg");
-        background-size: 100% 100%;
         margin-top: 50px;
         padding: 27.5% 0 37%;
     }
@@ -150,6 +149,9 @@
         background-color: $white;
         border-radius: 9px;
         padding: 21px 42px 25px;
+        @include laptop {
+            padding: 21px 29px 25px;
+        }
         @include sp {
             padding: 24px 19px 25px;
             margin-top: 32px;

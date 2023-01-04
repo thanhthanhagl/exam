@@ -1,10 +1,9 @@
 .c-service {
     background-image: url("./assets/img/bg-section3.jpg");
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     @include sp {
         background-image: url("./assets/img/bgsection3sp.jpg");
-        background-size: 100% 100%;
     }
 
     .c-service__main {
@@ -56,7 +55,8 @@
         color: $black;
         margin-top: 35px;
         @include sp {
-            margin-top: 34px;
+            margin: 34px auto 0;
+            max-width: 335px;
         }
     }
 

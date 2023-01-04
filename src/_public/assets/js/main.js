@@ -67,7 +67,6 @@ $(document).ready(function () {
     //backtotop
     function PageTopAnime() {
         var scroll = $(window).scrollTop();
-        $('.c-backtotop').css('opacity', '0');
         $('.c-header').removeClass("is-scroll");
         $('.c-header__logo').removeClass("is-scroll");
         $('.c-fixed').css('opacity', '0');
@@ -81,14 +80,12 @@ $(document).ready(function () {
         }
         if (scroll >= 200) {
             $('.c-backtotop').removeClass('is-down');
-            $('#page-top').addClass('is-up');
-            $('.c-backtotop').css('opacity', '1');
+            $('.c-backtotop').addClass('is-up');
         }  
         else {
             if ($('.c-backtotop').hasClass('is-up')) {
                 $('.c-backtotop').removeClass('is-up');
                 $('.c-backtotop').addClass('is-down');
-                $('.c-backtotop').css('opacity', '1');
             }            
         }
 
@@ -118,13 +115,13 @@ $(document).ready(function () {
     $('.c-backtotop').click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 500);
+        }, 800);
         return false;
     });
     $('.c-footer__linktop').click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 500);
+        }, 800);
         return false;
     });
     //animation text
@@ -138,7 +135,7 @@ $(document).ready(function () {
             }
         });
     });
-    //data bachground fixed
+    //data background fixed
     if ($(window).width() < 768) {
         $('.parallax').attr("data-parallax-image", "./assets/img/bgfixedsp.jpg");
         $('.parallax').css("background-image", "url('./assets/img/bgfixedsp.jpg')");
@@ -174,7 +171,7 @@ $(document).ready(function () {
         var item = $(this).next();
         if (item.length > 0) {
             $(this).next().toggleClass("is-click");
-            $(this).parent().addClass("is-show");
+            $(this).parent().toggleClass("is-show");
             $('body').addClass("is-fixed");
         }
         else {

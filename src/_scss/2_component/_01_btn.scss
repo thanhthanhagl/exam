@@ -76,7 +76,12 @@ btn
     transition: all 0.3s;
     padding-top: 21px;
     padding-left: 10px;
-    z-index: 10;
+    z-index: 8;
+    background-color: $white;
+
+    &:hover {
+        opacity: 0.7;
+    }
     @include sp {
         width: 44px;
         height: 44px;
